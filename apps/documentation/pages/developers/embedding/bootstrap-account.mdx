@@ -1,0 +1,119 @@
+---
+title: Bootstrap Embedding Account
+description: Create a verified account, team, and API key for embedded authoring bootstrap flows
+---
+
+# Bootstrap Embedding Account
+
+Use this endpoint to provision a brand-new Documenso embedding account in one request.
+
+It creates:
+
+- a new user account
+- a verified email state for that user
+- a new team under the user's personal organisation
+- a new API key scoped to that team
+
+## Endpoint
+
+```http
+POST /api/v2/embedding/create-bootstrap-account
+```
+
+The same route is also available on beta:
+
+```http
+POST /api/v2-beta/embedding/create-bootstrap-account
+```
+
+## Authentication
+
+This endpoint is protected with an internal secret header.
+
+Send:
+
+```http
+x-documenso-internal-secret: <your internal bootstrap secret>
+```
+
+The secret is validated against `DOCUMENSO_EMBEDDING_BOOTSTRAP_SECRET`.
+
+## Request Body
+
+```json
+{
+  "name": "Embedding User",
+  "email": "embedding-user@example.com",
+  "signature": "Optional default signature",
+  "teamName": "Acme Embedded Team",
+  "teamUrl": "acme-embedded-team",
+  "tokenName": "Acme Embedding API Key",
+  "expirationDate": null
+}
+```
+
+### Field Notes
+
+- `name`: required user display name
+- `email`: required, must be unique
+- `signature`: optional
+- `teamName`: required team display name
+- `teamUrl`: required unique team URL slug
+- `tokenName`: required API key label
+- `expirationDate`: nullable string (same format as the existing API token create route)
+
+## Response
+
+```json
+{
+  "userId": 123,
+  "teamId": 456,
+  "apiKeyId": 789,
+  "apiKey": "api_xxxxxxxxxxxxxxxx"
+}
+```
+
+## What Happens Internally
+
+On success, Documenso will:
+
+1. generate a secure server-side password (never returned)
+2. create the user account
+3. mark the user email as verified
+4. create a new team in the user's personal organisation
+5. create and return a new API key for that team
+
+## Example (Node.js)
+
+```ts
+const response = await fetch(
+  'https://app.documenso.com/api/v2/embedding/create-bootstrap-account',
+  {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-documenso-internal-secret': process.env.DOCUMENSO_EMBEDDING_BOOTSTRAP_SECRET!,
+    },
+    body: JSON.stringify({
+      name: 'Embedding User',
+      email: 'embedding-user@example.com',
+      teamName: 'Acme Embedded Team',
+      teamUrl: 'acme-embedded-team',
+      tokenName: 'Acme Embedding API Key',
+      expirationDate: null,
+    }),
+  },
+);
+
+if (!response.ok) {
+  throw new Error(`Bootstrap failed with status ${response.status}`);
+}
+
+const data = await response.json();
+console.log(data.apiKey);
+```
+
+## Common Failure Cases
+
+- `401 Unauthorized`: missing or invalid `x-documenso-internal-secret`
+- `400 Bad Request`: invalid request payload or duplicate email/team URL
