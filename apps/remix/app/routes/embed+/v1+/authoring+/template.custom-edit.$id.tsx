@@ -17,7 +17,6 @@ import { getTemplateById } from '@documenso/lib/server-only/template/get-templat
 import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
 import { nanoid } from '@documenso/lib/universal/id';
 import { trpc } from '@documenso/trpc/react';
-import { Stepper } from '@documenso/ui/primitives/stepper';
 import { useToast } from '@documenso/ui/primitives/use-toast';
 
 import { ConfigureDocumentProvider } from '~/components/embed/authoring/configure-document-context';
@@ -283,16 +282,14 @@ export default function EmbeddingAuthoringTemplateEditPage() {
   return (
     <div className="relative mx-auto flex min-h-[100dvh] max-w-screen-lg p-6">
       <ConfigureDocumentProvider isTemplate={false} features={features ?? {}}>
-        <Stepper currentStep={currentStep} setCurrentStep={setCurrentStep}>
-          <ConfigureFieldsView
-            configData={configuration!}
-            presignToken={token}
-            envelopeItem={template.envelopeItems[0]}
-            defaultValues={fields ?? undefined}
-            onBack={undefined}
-            onSubmit={handleConfigureFieldsSubmit}
-          />
-        </Stepper>
+        <ConfigureFieldsView
+          configData={configuration!}
+          presignToken={token}
+          envelopeItem={template.envelopeItems[0]}
+          defaultValues={fields ?? undefined}
+          onBack={undefined}
+          onSubmit={handleConfigureFieldsSubmit}
+        />
       </ConfigureDocumentProvider>
     </div>
   );
