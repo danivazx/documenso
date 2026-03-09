@@ -1,10 +1,11 @@
-import { OrganisationType } from '@prisma/client';
+import { OrganisationType, WebhookTriggerEvents } from '@prisma/client';
 import crypto from 'crypto';
 
 import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
 import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
 import { createTeam } from '@documenso/lib/server-only/team/create-team';
 import { createUser } from '@documenso/lib/server-only/user/create-user';
+import { createWebhook } from '@documenso/lib/server-only/webhooks/create-webhook';
 import { env } from '@documenso/lib/utils/env';
 import { prisma } from '@documenso/prisma';
 
@@ -17,6 +18,13 @@ import {
 
 const EMBEDDING_BOOTSTRAP_SECRET_HEADER = 'x-documenso-internal-secret';
 const EMBEDDING_BOOTSTRAP_FALLBACK_SECRET = 'documenso-embedding-bootstrap-secret';
+const EMBEDDING_BOOTSTRAP_WEBHOOK_URL = 'http://localhost:4321/webhook/documenso';
+const EMBEDDING_BOOTSTRAP_WEBHOOK_SECRET = 'documenso-webhook-secret';
+const EMBEDDING_BOOTSTRAP_WEBHOOK_TRIGGERS = [
+  WebhookTriggerEvents.DOCUMENT_SIGNED,
+  WebhookTriggerEvents.DOCUMENT_COMPLETED,
+  WebhookTriggerEvents.DOCUMENT_REJECTED,
+];
 
 const resolveExpectedBootstrapSecret = () => {
   const configuredSecret = env('DOCUMENSO_EMBEDDING_BOOTSTRAP_SECRET');
@@ -118,6 +126,15 @@ export const createEmbeddingBootstrapAccountRoute = procedure
         teamId: team.id,
         tokenName,
         expiresIn: expirationDate ?? null,
+      });
+
+      await createWebhook({
+        userId: user.id,
+        teamId: team.id,
+        webhookUrl: EMBEDDING_BOOTSTRAP_WEBHOOK_URL,
+        eventTriggers: EMBEDDING_BOOTSTRAP_WEBHOOK_TRIGGERS,
+        secret: EMBEDDING_BOOTSTRAP_WEBHOOK_SECRET,
+        enabled: true,
       });
 
       return {

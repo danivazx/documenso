@@ -84,22 +84,26 @@ export default function EmbeddingAuthoringDocumentCreatePage() {
           uploadSignatureEnabled:
             signatureTypes.length === 0 || signatureTypes.includes(DocumentSignatureType.UPLOAD),
         },
-        recipients: configuration.signers.map((signer) => ({
-          name: signer.name,
-          email: signer.email,
-          role: signer.role,
-          fields: fields
-            .filter((field) => field.signerEmail === signer.email)
-            // There's a gnarly discriminated union that makes this hard to satisfy, we're casting for the second
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            .map<any>((f) => ({
-              ...f,
-              pageX: f.pageX,
-              pageY: f.pageY,
-              width: f.pageWidth,
-              height: f.pageHeight,
-            })),
-        })),
+        recipients: configuration.signers.map((signer, signerIndex) => {
+          const signerRecipientId = signer.nativeId ?? signerIndex;
+
+          return {
+            name: signer.name,
+            email: signer.email,
+            role: signer.role,
+            fields: fields
+              .filter((field) => field.recipientId === signerRecipientId)
+              // There's a gnarly discriminated union that makes this hard to satisfy, we're casting for the second
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              .map<any>((f) => ({
+                ...f,
+                pageX: f.pageX,
+                pageY: f.pageY,
+                width: f.pageWidth,
+                height: f.pageHeight,
+              })),
+          };
+        }),
       });
 
       toast({

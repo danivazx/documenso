@@ -74,22 +74,26 @@ export default function EmbeddingAuthoringTemplateCreatePage() {
         title: configuration.title,
         documentDataId: documentData.id,
         meta: metaWithExternalId,
-        recipients: configuration.signers.map((signer) => ({
-          name: signer.name,
-          email: signer.email,
-          role: signer.role,
-          fields: fields
-            .filter((field) => field.signerEmail === signer.email)
-            // There's a gnarly discriminated union that makes this hard to satisfy, we're casting for the second
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            .map<any>((field) => ({
-              ...field,
-              pageX: field.pageX,
-              pageY: field.pageY,
-              width: field.pageWidth,
-              height: field.pageHeight,
-            })),
-        })),
+        recipients: configuration.signers.map((signer, signerIndex) => {
+          const signerRecipientId = signer.nativeId ?? signerIndex;
+
+          return {
+            name: signer.name,
+            email: signer.email,
+            role: signer.role,
+            fields: fields
+              .filter((field) => field.recipientId === signerRecipientId)
+              // There's a gnarly discriminated union that makes this hard to satisfy, we're casting for the second
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              .map<any>((field) => ({
+                ...field,
+                pageX: field.pageX,
+                pageY: field.pageY,
+                width: field.pageWidth,
+                height: field.pageHeight,
+              })),
+          };
+        }),
       });
 
       toast({

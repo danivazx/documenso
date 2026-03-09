@@ -464,14 +464,10 @@ export const ConfigureFieldsView = ({
         {/* Desktop sidebar */}
         {!isMobile && (
           <div className="order-2 col-span-12 md:order-1 md:col-span-4">
-            <div className="sticky top-4 max-h-[calc(100vh-2rem)] rounded-lg border border-border bg-widget p-4 pb-6">
-              <h2 className="mb-1 text-lg font-medium">
+            <div className="sticky top-4 rounded-lg border border-border bg-widget p-4 pb-6">
+              <h2 className="mb-4 text-lg font-medium">
                 <Trans>Configure Fields</Trans>
               </h2>
-
-              <p className="mb-6 text-sm text-muted-foreground">
-                <Trans>Configure the fields you want to place on the document.</Trans>
-              </p>
 
               <RecipientSelector
                 selectedRecipient={selectedRecipient}
@@ -505,7 +501,7 @@ export const ConfigureFieldsView = ({
                 )}
 
                 <Button
-                  className="flex-1"
+                  className="flex-1 bg-green-500 text-white hover:bg-green-600"
                   type="button"
                   loading={form.formState.isSubmitting}
                   disabled={!form.formState.isValid}
@@ -620,10 +616,6 @@ export const ConfigureFieldsView = ({
             <h2 className="mb-1 text-lg font-medium">
               <Trans>Configure Fields</Trans>
             </h2>
-
-            <p className="mb-6 text-sm text-muted-foreground">
-              <Trans>Configure the fields you want to place on the document.</Trans>
-            </p>
 
             <RecipientSelector
               selectedRecipient={selectedRecipient}

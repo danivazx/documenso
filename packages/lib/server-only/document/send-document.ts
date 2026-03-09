@@ -194,24 +194,24 @@ export const sendDocument = async ({
   const fieldsToAutoInsert: { fieldId: number; customText: string }[] = [];
 
   // Validate and autoinsert fields for V2 envelopes.
-  if (envelope.internalVersion === 2) {
-    for (const unknownField of envelope.fields) {
-      const recipient = envelope.recipients.find((r) => r.id === unknownField.recipientId);
+  // if (envelope.internalVersion === 2) {
+  //   for (const unknownField of envelope.fields) {
+  //     const recipient = envelope.recipients.find((r) => r.id === unknownField.recipientId);
 
-      if (!recipient) {
-        throw new AppError(AppErrorCode.NOT_FOUND, {
-          message: 'Recipient not found',
-        });
-      }
+  //     if (!recipient) {
+  //       throw new AppError(AppErrorCode.NOT_FOUND, {
+  //         message: 'Recipient not found',
+  //       });
+  //     }
 
-      const fieldToAutoInsert = extractFieldAutoInsertValues(unknownField);
+  //     const fieldToAutoInsert = extractFieldAutoInsertValues(unknownField);
 
-      // Only auto-insert fields if the recipient has not been sent the document yet.
-      if (fieldToAutoInsert && recipient.sendStatus !== SendStatus.SENT) {
-        fieldsToAutoInsert.push(fieldToAutoInsert);
-      }
-    }
-  }
+  //     // Only auto-insert fields if the recipient has not been sent the document yet.
+  //     if (fieldToAutoInsert && recipient.sendStatus !== SendStatus.SENT) {
+  //       fieldsToAutoInsert.push(fieldToAutoInsert);
+  //     }
+  //   }
+  // }
 
   const updatedEnvelope = await prisma.$transaction(async (tx) => {
     if (envelope.status === DocumentStatus.DRAFT) {

@@ -177,10 +177,12 @@ export default function EmbeddingAuthoringDocumentEditPage() {
         return fieldData;
       }
 
-      const signerEmails = data.signers.map((signer) => signer.email);
+      const signerRecipientIds = data.signers.map(
+        (signer, signerIndex) => signer.nativeId ?? signerIndex,
+      );
 
       return {
-        fields: fieldData.fields.filter((field) => signerEmails.includes(field.signerEmail)),
+        fields: fieldData.fields.filter((field) => signerRecipientIds.includes(field.recipientId)),
       };
     });
 
@@ -229,26 +231,30 @@ export default function EmbeddingAuthoringDocumentEditPage() {
               configuration.meta.signatureTypes.includes(DocumentSignatureType.UPLOAD)
             : undefined,
         },
-        recipients: configuration.signers.map((signer) => ({
-          id: signer.nativeId,
-          name: signer.name,
-          email: signer.email,
-          role: signer.role,
-          signingOrder: signer.signingOrder,
-          fields: fields
-            .filter((field) => field.signerEmail === signer.email)
-            // There's a gnarly discriminated union that makes this hard to satisfy, we're casting for the second
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            .map<any>((f) => ({
-              ...f,
-              id: f.nativeId,
-              envelopeItemId: document.documentData.envelopeItemId,
-              pageX: f.pageX,
-              pageY: f.pageY,
-              width: f.pageWidth,
-              height: f.pageHeight,
-            })),
-        })),
+        recipients: configuration.signers.map((signer, signerIndex) => {
+          const signerRecipientId = signer.nativeId ?? signerIndex;
+
+          return {
+            id: signer.nativeId,
+            name: signer.name,
+            email: signer.email,
+            role: signer.role,
+            signingOrder: signer.signingOrder,
+            fields: fields
+              .filter((field) => field.recipientId === signerRecipientId)
+              // There's a gnarly discriminated union that makes this hard to satisfy, we're casting for the second
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              .map<any>((f) => ({
+                ...f,
+                id: f.nativeId,
+                envelopeItemId: document.documentData.envelopeItemId,
+                pageX: f.pageX,
+                pageY: f.pageY,
+                width: f.pageWidth,
+                height: f.pageHeight,
+              })),
+          };
+        }),
       });
 
       toast({

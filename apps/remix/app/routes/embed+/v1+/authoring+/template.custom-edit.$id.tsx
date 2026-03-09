@@ -202,26 +202,30 @@ export default function EmbeddingAuthoringTemplateEditPage() {
               configuration.meta.signatureTypes.includes(DocumentSignatureType.UPLOAD)
             : undefined,
         },
-        recipients: configuration.signers.map((signer) => ({
-          id: signer.nativeId,
-          name: signer.name,
-          email: signer.email,
-          role: signer.role,
-          signingOrder: signer.signingOrder,
-          fields: fields
-            .filter((field) => field.signerEmail === signer.email)
-            // There's a gnarly discriminated union that makes this hard to satisfy, we're casting for the second
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            .map<any>((f) => ({
-              ...f,
-              id: f.nativeId,
-              envelopeItemId: template.templateDocumentData.envelopeItemId,
-              pageX: f.pageX,
-              pageY: f.pageY,
-              width: f.pageWidth,
-              height: f.pageHeight,
-            })),
-        })),
+        recipients: configuration.signers.map((signer, signerIndex) => {
+          const signerRecipientId = signer.nativeId ?? signerIndex;
+
+          return {
+            id: signer.nativeId,
+            name: signer.name,
+            email: signer.email,
+            role: signer.role,
+            signingOrder: signer.signingOrder,
+            fields: fields
+              .filter((field) => field.recipientId === signerRecipientId)
+              // There's a gnarly discriminated union that makes this hard to satisfy, we're casting for the second
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              .map<any>((f) => ({
+                ...f,
+                id: f.nativeId,
+                envelopeItemId: template.templateDocumentData.envelopeItemId,
+                pageX: f.pageX,
+                pageY: f.pageY,
+                width: f.pageWidth,
+                height: f.pageHeight,
+              })),
+          };
+        }),
       });
 
       toast({
