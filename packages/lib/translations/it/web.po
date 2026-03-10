@@ -2638,11 +2638,6 @@ msgstr "Configura Modello"
 msgid "Configure the {0} field"
 msgstr "Configura il campo {0}"
 
-#: apps/remix/app/components/embed/authoring/configure-fields-view.tsx
-#: apps/remix/app/components/embed/authoring/configure-fields-view.tsx
-msgid "Configure the fields you want to place on the document."
-msgstr "Configura i campi che vuoi posizionare sul documento."
-
 #: apps/remix/app/components/dialogs/team-group-create-dialog.tsx
 msgid "Configure the team roles for each group"
 msgstr "Configura i ruoli del team per ogni gruppo"
@@ -3048,6 +3043,7 @@ msgid "Created"
 msgstr "Creato"
 
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
+#: apps/remix/app/components/tables/admin-user-teams-table.tsx
 #: apps/remix/app/components/tables/user-organisations-table.tsx
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/audit-log.tsx
 #: packages/lib/server-only/pdf/render-audit-logs.ts
@@ -4632,6 +4628,8 @@ msgstr "Busta aggiornata"
 #: apps/remix/app/routes/_authenticated+/settings+/security.sessions.tsx
 #: apps/remix/app/routes/embed+/v1+/authoring+/document.edit.$id.tsx
 #: apps/remix/app/routes/embed+/v1+/authoring+/document.edit.$id.tsx
+#: apps/remix/app/routes/embed+/v1+/authoring+/template.custom-edit.$id.tsx
+#: apps/remix/app/routes/embed+/v1+/authoring+/template.custom-edit.$id.tsx
 #: apps/remix/app/routes/embed+/v1+/authoring+/template.edit.$id.tsx
 #: apps/remix/app/routes/embed+/v1+/authoring+/template.edit.$id.tsx
 #: packages/ui/primitives/document-flow/field-item-advanced-settings.tsx
@@ -4788,6 +4786,7 @@ msgstr "Aggiornamento destinario fallito"
 msgid "Failed to update subscription claim."
 msgstr "Aggiornamento di rivendicazione di abbonamento fallito."
 
+#: apps/remix/app/routes/embed+/v1+/authoring+/template.custom-edit.$id.tsx
 #: apps/remix/app/routes/embed+/v1+/authoring+/template.edit.$id.tsx
 msgid "Failed to update template"
 msgstr "Aggiornamento modello fallito"
@@ -6506,6 +6505,7 @@ msgid "Or continue with"
 msgstr "Oppure continua con"
 
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
+#: apps/remix/app/components/tables/admin-user-teams-table.tsx
 #: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 #: apps/remix/app/components/tables/user-organisations-table.tsx
 #: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
@@ -6913,6 +6913,7 @@ msgid "Please complete the document once reviewed"
 msgstr "Per favore completa il documento una volta rivisto"
 
 #: apps/remix/app/routes/embed+/v1+/authoring+/document.edit.$id.tsx
+#: apps/remix/app/routes/embed+/v1+/authoring+/template.custom-edit.$id.tsx
 #: apps/remix/app/routes/embed+/v1+/authoring+/template.edit.$id.tsx
 msgid "Please configure the document first"
 msgstr "Si prega di configurare prima il documento"
@@ -7754,6 +7755,7 @@ msgstr "Destra"
 #: apps/remix/app/components/dialogs/template-direct-link-dialog.tsx
 #: apps/remix/app/components/embed/authoring/configure-document-recipients.tsx
 #: apps/remix/app/components/tables/admin-organisations-table.tsx
+#: apps/remix/app/components/tables/admin-user-teams-table.tsx
 #: apps/remix/app/components/tables/organisation-groups-table.tsx
 #: apps/remix/app/components/tables/organisation-member-invites-table.tsx
 #: apps/remix/app/components/tables/organisation-members-table.tsx
@@ -8786,6 +8788,7 @@ msgstr "Stato dell’abbonamento"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id._index.tsx
 #: apps/remix/app/routes/embed+/v1+/authoring+/document.edit.$id.tsx
+#: apps/remix/app/routes/embed+/v1+/authoring+/template.custom-edit.$id.tsx
 #: apps/remix/app/routes/embed+/v1+/authoring+/template.edit.$id.tsx
 msgid "Success"
 msgstr "Successo"
@@ -8848,6 +8851,7 @@ msgstr "Requisiti di sistema"
 msgid "System Theme"
 msgstr "Tema del sistema"
 
+#: apps/remix/app/components/tables/admin-user-teams-table.tsx
 #: apps/remix/app/components/tables/organisation-insights-table.tsx
 #: apps/remix/app/components/tables/organisation-teams-table.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
@@ -8937,6 +8941,10 @@ msgstr "Membri del team"
 msgid "Team members have been added."
 msgstr "I membri del team sono stati aggiunti."
 
+#: apps/remix/app/routes/_authenticated+/admin+/users.$id.tsx
+msgid "Team Memberships"
+msgstr ""
+
 #: apps/remix/app/components/dialogs/team-create-dialog.tsx
 #: apps/remix/app/components/forms/team-update-form.tsx
 #: apps/remix/app/components/tables/organisation-insights-table.tsx
@@ -8996,6 +9004,10 @@ msgstr "I team ti aiutano a organizzare il tuo lavoro e collaborare con altri. C
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups.$id.tsx
 msgid "Teams that this organisation group is currently assigned to"
 msgstr "Team a cui è attualmente assegnato questo gruppo di organizzazione"
+
+#: apps/remix/app/routes/_authenticated+/admin+/users.$id.tsx
+msgid "Teams that this user is a member of and their roles."
+msgstr ""
 
 #: apps/remix/app/components/dialogs/organisation-member-invite-dialog.tsx
 #: apps/remix/app/components/dialogs/public-profile-template-manage-dialog.tsx
@@ -9063,6 +9075,7 @@ msgstr "Impostazioni del modello"
 msgid "Template title"
 msgstr "Titolo del modello"
 
+#: apps/remix/app/routes/embed+/v1+/authoring+/template.custom-edit.$id.tsx
 #: apps/remix/app/routes/embed+/v1+/authoring+/template.edit.$id.tsx
 msgid "Template updated successfully"
 msgstr "Modello aggiornato con successo"
