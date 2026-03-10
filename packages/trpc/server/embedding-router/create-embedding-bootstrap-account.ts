@@ -16,7 +16,6 @@ import {
   createEmbeddingBootstrapAccountMeta,
 } from './create-embedding-bootstrap-account.types';
 
-const EMBEDDING_BOOTSTRAP_SECRET_HEADER = env('DOCUMENSO_EMBEDDING_BOOTSTRAP_SECRET') || '';
 const EMBEDDING_BOOTSTRAP_FALLBACK_SECRET = 'documenso-embedding-bootstrap-secret';
 const EMBEDDING_BOOTSTRAP_WEBHOOK_URL = 'http://localhost:4321/webhook/documenso';
 const EMBEDDING_BOOTSTRAP_WEBHOOK_SECRET = env('DOCUMENSO_WEBHOOK_SECRET') || '';
@@ -54,7 +53,7 @@ export const createEmbeddingBootstrapAccountRoute = procedure
   .output(ZCreateEmbeddingBootstrapAccountResponseSchema)
   .mutation(async ({ input, ctx }) => {
     try {
-      const internalSecret = ctx.req.headers.get(EMBEDDING_BOOTSTRAP_SECRET_HEADER);
+      const internalSecret = ctx.req.headers.get('x-documenso-internal-secret');
       const expectedSecret = resolveExpectedBootstrapSecret();
 
       if (!internalSecret || internalSecret !== expectedSecret) {
