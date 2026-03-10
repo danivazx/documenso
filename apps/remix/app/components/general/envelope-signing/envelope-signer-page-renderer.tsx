@@ -415,6 +415,7 @@ export default function EnvelopeSignerPageRenderer() {
     try {
       unsafeRenderFieldOnLayer(unparsedField);
     } catch (err) {
+      console.log({ unparsedField });
       console.error(err);
       setRenderError(true);
     }

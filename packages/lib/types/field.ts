@@ -6,11 +6,7 @@ import { FieldSchema } from '@documenso/prisma/generated/zod/modelSchema/FieldSc
 import {
   FIELD_SIGNATURE_META_DEFAULT_VALUES,
   ZCheckboxFieldMeta,
-  ZDateFieldMeta,
   ZDropdownFieldMeta,
-  ZEmailFieldMeta,
-  ZInitialsFieldMeta,
-  ZNameFieldMeta,
   ZNumberFieldMeta,
   ZRadioFieldMeta,
   ZSignatureFieldMeta,
@@ -132,28 +128,28 @@ export type TFieldFreeSignature = z.infer<typeof ZFieldFreeSignatureSchema>;
 
 export const ZFieldInitialsSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.INITIALS),
-  fieldMeta: ZInitialsFieldMeta,
+  fieldMeta: z.null(),
 });
 
 export type TFieldInitials = z.infer<typeof ZFieldInitialsSchema>;
 
 export const ZFieldNameSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.NAME),
-  fieldMeta: ZNameFieldMeta,
+  fieldMeta: z.null(),
 });
 
 export type TFieldName = z.infer<typeof ZFieldNameSchema>;
 
 export const ZFieldEmailSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.EMAIL),
-  fieldMeta: ZEmailFieldMeta,
+  fieldMeta: z.null(),
 });
 
 export type TFieldEmail = z.infer<typeof ZFieldEmailSchema>;
 
 export const ZFieldDateSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.DATE),
-  fieldMeta: ZDateFieldMeta,
+  fieldMeta: z.null(),
 });
 
 export type TFieldDate = z.infer<typeof ZFieldDateSchema>;

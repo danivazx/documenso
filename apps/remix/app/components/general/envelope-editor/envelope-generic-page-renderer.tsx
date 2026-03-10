@@ -112,6 +112,7 @@ export default function EnvelopeGenericPageRenderer() {
     try {
       unsafeRenderFieldOnLayer(field);
     } catch (err) {
+      console.log({ field });
       console.error(err);
       setRenderError(true);
     }

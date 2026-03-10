@@ -165,6 +165,7 @@ export default function EnvelopeEditorFieldsPageRenderer() {
     try {
       unsafeRenderFieldOnLayer(field);
     } catch (err) {
+      console.log({ field });
       console.error(err);
       setRenderError(true);
     }

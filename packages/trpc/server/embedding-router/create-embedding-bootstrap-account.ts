@@ -17,7 +17,7 @@ import {
 } from './create-embedding-bootstrap-account.types';
 
 const EMBEDDING_BOOTSTRAP_FALLBACK_SECRET = 'documenso-embedding-bootstrap-secret';
-const EMBEDDING_BOOTSTRAP_WEBHOOK_URL = 'http://localhost:4321/webhook/documenso';
+const EMBEDDING_BOOTSTRAP_WEBHOOK_URL = env('DOCUMENSO_EMBEDDING_BOOTSTRAP_WEBHOOK_URL') || '';
 const EMBEDDING_BOOTSTRAP_WEBHOOK_SECRET = env('DOCUMENSO_WEBHOOK_SECRET') || '';
 const EMBEDDING_BOOTSTRAP_WEBHOOK_TRIGGERS = [
   WebhookTriggerEvents.DOCUMENT_SIGNED,

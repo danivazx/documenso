@@ -94,7 +94,7 @@ export const EnvelopeSigningProvider = ({
 
   const { envelope, recipient } = envelopeData;
 
-  const [fullName, setFullName] = useState(initialFullName || '');
+  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState(initialEmail || '');
 
   const [showPendingFieldTooltip, setShowPendingFieldTooltip] = useState(false);
