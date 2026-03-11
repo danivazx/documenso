@@ -89,6 +89,20 @@ const getTransport = (): Transporter => {
     });
   }
 
+  console.log({
+    host: env('NEXT_PRIVATE_SMTP_HOST') ?? '127.0.0.1:2500',
+    port: Number(env('NEXT_PRIVATE_SMTP_PORT')) || 587,
+    secure: env('NEXT_PRIVATE_SMTP_SECURE') === 'true',
+    ignoreTLS: env('NEXT_PRIVATE_SMTP_UNSAFE_IGNORE_TLS') === 'true',
+    auth: env('NEXT_PRIVATE_SMTP_USERNAME')
+      ? {
+          user: env('NEXT_PRIVATE_SMTP_USERNAME'),
+          pass: env('NEXT_PRIVATE_SMTP_PASSWORD') ?? '',
+        }
+      : undefined,
+    ...(env('NEXT_PRIVATE_SMTP_SERVICE') ? { service: env('NEXT_PRIVATE_SMTP_SERVICE') } : {}),
+  });
+
   return createTransport({
     host: env('NEXT_PRIVATE_SMTP_HOST') ?? '127.0.0.1:2500',
     port: Number(env('NEXT_PRIVATE_SMTP_PORT')) || 587,

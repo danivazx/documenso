@@ -40,6 +40,11 @@ export const run = async ({
 }) => {
   const { userId, documentId, recipientId, requestMetadata } = payload;
 
+  const _start = Date.now();
+  const elapsed = () => `${Date.now() - _start}ms`;
+
+  console.log('[send-signing-email] start', { userId, documentId, recipientId });
+
   const [user, envelope, recipient] = await Promise.all([
     prisma.user.findFirstOrThrow({
       where: {
@@ -79,6 +84,12 @@ export const run = async ({
     }),
   ]);
 
+  console.log('[send-signing-email] db queries done', {
+    elapsed: elapsed(),
+    envelopeId: envelope.id,
+    recipientRole: recipient.role,
+  });
+
   const { documentMeta, team } = envelope;
 
   if (recipient.role === RecipientRole.CC) {
@@ -93,6 +104,8 @@ export const run = async ({
     return;
   }
 
+  console.log('[send-signing-email] fetching email context', { elapsed: elapsed() });
+
   const { branding, emailLanguage, settings, organisationType, senderEmail, replyToEmail } =
     await getEmailContext({
       emailType: 'RECIPIENT',
@@ -102,6 +115,12 @@ export const run = async ({
       },
       meta: envelope.documentMeta,
     });
+
+  console.log('[send-signing-email] email context ready', {
+    elapsed: elapsed(),
+    emailLanguage,
+    organisationType,
+  });
 
   const customEmail = envelope?.documentMeta;
   const isDirectTemplate = envelope.source === DocumentSource.TEMPLATE_DIRECT_LINK;
@@ -179,7 +198,11 @@ export const run = async ({
   });
 
   if (isRecipientEmailValidForSending(recipient)) {
+    console.log('[send-signing-email] sending email', { elapsed: elapsed(), to: recipient.email });
+
     await io.runTask('send-signing-email', async () => {
+      console.log('[send-signing-email] rendering email', { elapsed: elapsed() });
+
       const [html, text] = await Promise.all([
         renderEmailWithI18N(template, { lang: emailLanguage, branding }),
         renderEmailWithI18N(template, {
@@ -188,6 +211,8 @@ export const run = async ({
           plainText: true,
         }),
       ]);
+
+      console.log('[send-signing-email] email rendered, calling mailer', { elapsed: elapsed() });
 
       await mailer.sendMail({
         to: {
@@ -203,8 +228,17 @@ export const run = async ({
         html,
         text,
       });
+
+      console.log('[send-signing-email] mailer done', { elapsed: elapsed() });
+    });
+  } else {
+    console.log('[send-signing-email] skipping email (invalid for sending)', {
+      elapsed: elapsed(),
+      recipientId: recipient.id,
     });
   }
+
+  console.log('[send-signing-email] updating recipient send status', { elapsed: elapsed() });
 
   await io.runTask('update-recipient', async () => {
     await prisma.recipient.update({
@@ -216,6 +250,8 @@ export const run = async ({
       },
     });
   });
+
+  console.log('[send-signing-email] storing audit log', { elapsed: elapsed() });
 
   await io.runTask('store-audit-log', async () => {
     await prisma.documentAuditLog.create({
@@ -235,4 +271,6 @@ export const run = async ({
       }),
     });
   });
+
+  console.log('[send-signing-email] done', { elapsed: elapsed() });
 };
