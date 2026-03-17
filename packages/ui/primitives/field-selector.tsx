@@ -1,3 +1,5 @@
+import { msg } from '@lingui/core/macro';
+import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { FieldType } from '@prisma/client';
 import {
@@ -28,55 +30,57 @@ export const FieldSelector = ({
   onSelectedFieldChange,
   disabled = false,
 }: FieldSelectorProps) => {
+  const { _ } = useLingui();
+
   const fieldTypes = [
     {
       type: FieldType.SIGNATURE,
-      label: 'Signature',
+      label: _(msg`Signature`),
       icon: null,
     },
     {
       type: FieldType.INITIALS,
-      label: 'Initials',
+      label: _(msg`Initials`),
       icon: Contact,
     },
     {
       type: FieldType.EMAIL,
-      label: 'Email',
+      label: _(msg`Email`),
       icon: Mail,
     },
     {
       type: FieldType.NAME,
-      label: 'Name',
+      label: _(msg`Name`),
       icon: User,
     },
     {
       type: FieldType.DATE,
-      label: 'Date',
+      label: _(msg`Date`),
       icon: CalendarDays,
     },
     {
       type: FieldType.TEXT,
-      label: 'Text',
+      label: _(msg`Text`),
       icon: Type,
     },
     {
       type: FieldType.NUMBER,
-      label: 'Number',
+      label: _(msg`Number`),
       icon: Hash,
     },
     {
       type: FieldType.RADIO,
-      label: 'Radio',
+      label: _(msg`Radio`),
       icon: Disc,
     },
     {
       type: FieldType.CHECKBOX,
-      label: 'Checkbox',
+      label: _(msg`Checkbox`),
       icon: CheckSquare,
     },
     {
       type: FieldType.DROPDOWN,
-      label: 'Dropdown',
+      label: _(msg`Dropdown`),
       icon: ChevronDown,
     },
   ];
@@ -104,10 +108,10 @@ export const FieldSelector = ({
               )}
             >
               <CardContent className="relative flex items-center justify-center gap-x-2 px-6 py-4">
-                {Icon && <Icon className="text-muted-foreground h-4 w-4" />}
+                {Icon && <Icon className="h-4 w-4 text-muted-foreground" />}
                 <span
                   className={cn(
-                    'text-muted-foreground group-data-[selected]:text-foreground text-sm',
+                    'text-sm text-muted-foreground group-data-[selected]:text-foreground',
                     field.type === FieldType.SIGNATURE && 'invisible',
                   )}
                 >
@@ -115,7 +119,7 @@ export const FieldSelector = ({
                 </span>
 
                 {field.type === FieldType.SIGNATURE && (
-                  <div className="text-muted-foreground font-signature absolute inset-0 flex items-center justify-center text-lg">
+                  <div className="absolute inset-0 flex items-center justify-center font-signature text-lg text-muted-foreground">
                     <Trans>Signature</Trans>
                   </div>
                 )}
