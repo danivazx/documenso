@@ -33,7 +33,17 @@ export const handleNumberFieldClick = async (
 
   if (!numberToInsert) {
     numberToInsert = await SignFieldNumberDialog.call({
-      fieldMeta: field.fieldMeta,
+      fieldMeta: {
+        type: 'number',
+        // numberFormat: z.string().nullish(),
+        // value: z.string().optional(),
+        // minValue: z.coerce.number().nullish(),
+        // maxValue: z.coerce.number().nullish(),
+        // textAlign: ZFieldTextAlignSchema.optional(),
+        // lineHeight: ZFieldMetaLineHeight.nullish(),
+        // letterSpacing: ZFieldMetaLetterSpacing.nullish(),
+        // verticalAlign: ZFieldMetaVerticalAlign.nullish(),
+      },
     });
   }
 
