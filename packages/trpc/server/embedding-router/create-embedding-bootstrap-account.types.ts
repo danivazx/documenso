@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { ZSupportedLanguageCodeSchema } from '@documenso/lib/constants/i18n';
+
 import { ZTeamNameSchema, ZTeamUrlSchema } from '../team-router/schema';
 import type { TrpcRouteMeta } from '../trpc';
 
@@ -25,6 +27,7 @@ export const ZCreateEmbeddingBootstrapAccountRequestSchema = z.object({
     .trim()
     .min(3, { message: 'The token name should be 3 characters or longer' }),
   expirationDate: z.string().nullable().optional(),
+  language: ZSupportedLanguageCodeSchema.optional(),
 });
 
 export const ZCreateEmbeddingBootstrapAccountResponseSchema = z.object({

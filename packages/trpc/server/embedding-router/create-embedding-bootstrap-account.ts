@@ -62,7 +62,8 @@ export const createEmbeddingBootstrapAccountRoute = procedure
         });
       }
 
-      const { name, email, signature, teamName, teamUrl, tokenName, expirationDate } = input;
+      const { name, email, signature, teamName, teamUrl, tokenName, expirationDate, language } =
+        input;
 
       const user = await createUser({
         name,
@@ -77,6 +78,7 @@ export const createEmbeddingBootstrapAccountRoute = procedure
         },
         data: {
           emailVerified: new Date(),
+          name: name ?? undefined,
         },
       });
 
@@ -87,8 +89,36 @@ export const createEmbeddingBootstrapAccountRoute = procedure
         },
         select: {
           id: true,
+          organisationGlobalSettingsId: true,
+          teams: {
+            select: {
+              id: true,
+              teamGlobalSettingsId: true,
+            },
+          },
         },
       });
+
+      await prisma.organisationGlobalSettings.update({
+        where: {
+          id: organisation?.organisationGlobalSettingsId ?? '',
+        },
+        data: {
+          documentLanguage: language,
+        },
+      });
+
+      // shoud only be 1 anyway
+      for (const team of organisation?.teams ?? []) {
+        await prisma.teamGlobalSettings.update({
+          where: {
+            id: team.teamGlobalSettingsId ?? '',
+          },
+          data: {
+            documentLanguage: language,
+          },
+        });
+      }
 
       if (!organisation) {
         throw new AppError(AppErrorCode.NOT_FOUND, {

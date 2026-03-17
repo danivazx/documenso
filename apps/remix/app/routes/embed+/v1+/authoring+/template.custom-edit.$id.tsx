@@ -10,7 +10,6 @@ import {
   isValidDateFormat,
 } from '@documenso/lib/constants/date-formats';
 import { DocumentSignatureType } from '@documenso/lib/constants/document';
-import { isValidLanguageCode } from '@documenso/lib/constants/i18n';
 import { DEFAULT_DOCUMENT_TIME_ZONE } from '@documenso/lib/constants/time-zones';
 import { verifyEmbeddingPresignToken } from '@documenso/lib/server-only/embedding-presign/verify-embedding-presign-token';
 import { getTemplateById } from '@documenso/lib/server-only/template/get-template-by-id';
@@ -121,9 +120,7 @@ export default function EmbeddingAuthoringTemplateEditPage() {
       timezone: template.templateMeta?.timezone ?? DEFAULT_DOCUMENT_TIME_ZONE,
       signingOrder: template.templateMeta?.signingOrder ?? DocumentSigningOrder.PARALLEL,
       allowDictateNextSigner: template.templateMeta?.allowDictateNextSigner ?? false,
-      language: isValidLanguageCode(template.templateMeta?.language)
-        ? template.templateMeta.language
-        : undefined,
+      language: 'es',
       signatureTypes: signatureTypes,
       dateFormat: isValidDateFormat(template.templateMeta?.dateFormat)
         ? template.templateMeta?.dateFormat
