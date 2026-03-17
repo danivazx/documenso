@@ -7,7 +7,6 @@ import {
   FIELD_SIGNATURE_META_DEFAULT_VALUES,
   ZCheckboxFieldMeta,
   ZDropdownFieldMeta,
-  ZNumberFieldMeta,
   ZRadioFieldMeta,
   ZSignatureFieldMeta,
   ZTextFieldMeta,
@@ -156,7 +155,7 @@ export type TFieldDate = z.infer<typeof ZFieldDateSchema>;
 
 export const ZFieldNumberSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.NUMBER),
-  fieldMeta: ZNumberFieldMeta,
+  fieldMeta: z.null(),
 });
 
 export type TFieldNumber = z.infer<typeof ZFieldNumberSchema>;
