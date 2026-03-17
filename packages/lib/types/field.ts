@@ -9,7 +9,6 @@ import {
   ZDropdownFieldMeta,
   ZRadioFieldMeta,
   ZSignatureFieldMeta,
-  ZTextFieldMeta,
 } from './field-meta';
 
 /**
@@ -109,7 +108,7 @@ export const BaseFieldSchemaUsingNumbers = ZFieldSchema.extend({
 
 export const ZFieldTextSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.TEXT),
-  fieldMeta: ZTextFieldMeta,
+  fieldMeta: z.null(),
 });
 
 export type TFieldText = z.infer<typeof ZFieldTextSchema>;
