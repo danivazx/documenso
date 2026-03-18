@@ -624,17 +624,9 @@ msgstr "<0>{senderName} {senderEmail}</0> namens \"{0}\" heeft je uitgenodigd om
 msgid "<0>{teamName}</0> has requested to use your email address for their team on Documenso."
 msgstr "<0>{teamName}</0> heeft verzocht om je e-mailadres te gebruiken voor hun team op Documenso."
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "<0>Account management:</0> Modify your account settings, permissions, and preferences"
-msgstr "<0>Accountbeheer:</0> Je accountinstellingen, rechten en voorkeuren wijzigen"
-
 #: packages/ui/components/document/document-visibility-select.tsx
 msgid "<0>Admins only</0> - Only admins can access and view the document"
 msgstr "<0>Alleen beheerders</0> - Alleen beheerders kunnen toegang krijgen tot en het document bekijken"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "<0>Data access:</0> Access all data associated with your account"
-msgstr "<0>Gegevens­toegang:</0> Toegang tot alle gegevens die aan je account zijn gekoppeld"
 
 #: packages/ui/components/document/document-signature-settings-tooltip.tsx
 msgid "<0>Drawn</0> - A signature that is drawn using a mouse or stylus."
@@ -652,10 +644,6 @@ msgstr "<0>Gebeurtenissen:</0> Alle"
 #: packages/ui/components/document/document-visibility-select.tsx
 msgid "<0>Everyone</0> - Everyone can access and view the document"
 msgstr "<0>Iedereen</0> - Iedereen kan toegang krijgen tot en het document bekijken"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "<0>Full account access:</0> View all your profile information, settings, and activity"
-msgstr "<0>Volledige accounttoegang:</0> Bekijk al je profielinformatie, instellingen en activiteit"
 
 #: packages/ui/components/recipient/recipient-action-auth-select.tsx
 msgid "<0>Inherit authentication method</0> - Use the global action signing authentication method configured in the \"General Settings\" step"
@@ -745,10 +733,6 @@ msgstr "2FA-reset"
 msgid "3 months"
 msgstr "3 maanden"
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "400 Error"
-msgstr "400-fout"
-
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings._layout.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings._layout.tsx
 msgid "401 Unauthorized"
@@ -770,10 +754,6 @@ msgstr "404 niet gevonden"
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id.edit.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.$id._index.tsx
 msgid "404 Not found"
-msgstr "404 Niet gevonden"
-
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-msgid "404 Not Found"
 msgstr "404 Niet gevonden"
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups.$id.tsx
@@ -830,10 +810,6 @@ msgstr "7 dagen"
 msgid "A confirmation email has been sent, and it should arrive in your inbox shortly."
 msgstr "Er is een bevestigingsmail verzonden; deze zou binnenkort in je inbox moeten verschijnen."
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "A device capable of accessing, opening, and reading documents"
-msgstr "Een apparaat dat toegang kan krijgen tot documenten, deze kan openen en lezen"
-
 #: packages/lib/jobs/definitions/emails/send-signing-email.handler.ts
 msgid "A document was created by your direct template that requires you to {recipientActionVerb} it."
 msgstr "Er is een document aangemaakt via je directe sjabloon dat je moet {recipientActionVerb}."
@@ -856,10 +832,6 @@ msgstr "Er is een veld verwijderd"
 msgctxt "Audit log format"
 msgid "A field was updated"
 msgstr "Er is een veld bijgewerkt"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "A means to print or download documents for your records"
-msgstr "Een manier om documenten voor je administratie te printen of te downloaden"
 
 #: packages/email/templates/organisation-join.tsx
 msgid "A member has joined your organisation on Documenso"
@@ -890,7 +862,6 @@ msgid "A new token was created successfully."
 msgstr "Er is succesvol een nieuw token aangemaakt."
 
 #: apps/remix/app/components/forms/forgot-password.tsx
-#: apps/remix/app/routes/_unauthenticated+/check-email.tsx
 msgid "A password reset email has been sent, if you have an account you should see it in your inbox shortly."
 msgstr "Er is een e-mail om je wachtwoord te resetten verzonden; als je een account hebt, zou deze binnenkort in je inbox moeten verschijnen."
 
@@ -927,10 +898,6 @@ msgstr "Er is een verzoek ingediend door {0} op Documenso om je e-mailadres te g
 msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso."
 msgstr "Een geheim dat naar je URL wordt verzonden, zodat je kunt verifiëren dat het verzoek door Documenso is verzonden."
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "A stable internet connection"
-msgstr "Een stabiele internetverbinding"
-
 #: packages/email/templates/team-delete.tsx
 #: packages/email/templates/team-delete.tsx
 msgid "A team you were a part of has been deleted"
@@ -963,10 +930,6 @@ msgstr "Er wordt een verificatie-e-mail naar het opgegeven e-mailadres verzonden
 msgid "Accept"
 msgstr "Accepteren"
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Accept & Link Account"
-msgstr "Accepteren & account koppelen"
-
 #: packages/email/templates/organisation-invite.tsx
 msgid "Accept invitation to join an organisation on Documenso"
 msgstr "Uitnodiging accepteren om toe te treden tot een organisatie op Documenso"
@@ -974,10 +937,6 @@ msgstr "Uitnodiging accepteren om toe te treden tot een organisatie op Documenso
 #: packages/email/templates/confirm-team-email.tsx
 msgid "Accept team email request for {teamName} on Documenso"
 msgstr "Team-e-mailverzoek voor {teamName} op Documenso accepteren"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Acceptance and Consent"
-msgstr "Aanvaarding en toestemming"
 
 #: apps/remix/app/components/dialogs/team-inherit-member-disable-dialog.tsx
 msgid "Access disabled"
@@ -989,7 +948,6 @@ msgstr "Toegang ingeschakeld"
 
 #: apps/remix/app/components/general/document-signing/document-signing-auth-dialog.tsx
 #: apps/remix/app/components/general/org-menu-switcher.tsx
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
 msgid "Account"
 msgstr "Account"
 
@@ -1000,10 +958,6 @@ msgstr "Accountauthenticatie"
 
 #: packages/email/templates/organisation-account-link-confirmation.tsx
 msgid "Account creation request"
-msgstr "Verzoek tot aanmaken account"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Account Creation Request"
 msgstr "Verzoek tot aanmaken account"
 
 #: apps/remix/app/components/dialogs/account-delete-dialog.tsx
@@ -1019,18 +973,6 @@ msgstr "Account uitgeschakeld"
 msgid "Account enabled"
 msgstr "Account ingeschakeld"
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Account link declined"
-msgstr "Koppeling van account geweigerd"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Account linked successfully"
-msgstr "Account succesvol gekoppeld"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Account Linking Request"
-msgstr "Verzoek tot koppelen account"
-
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: packages/lib/server-only/pdf/generate-certificate-pdf.ts
 msgid "Account Re-Authentication"
@@ -1039,10 +981,6 @@ msgstr "Account‑herauthenticatie"
 #: apps/remix/app/routes/_authenticated+/settings+/security.linked-accounts.tsx
 msgid "Account unlinked"
 msgstr "Account ontkoppeld"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Acknowledgment"
-msgstr "Kennisgeving"
 
 #: apps/remix/app/components/general/document/document-page-view-dropdown.tsx
 #: apps/remix/app/components/tables/admin-document-logs-table.tsx
@@ -1354,10 +1292,6 @@ msgstr "Geavanceerde instellingen"
 msgid "Advanced Settings"
 msgstr "Geavanceerde instellingen"
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "After signing a document electronically, you will be provided the opportunity to view, download, and print the document for your records. It is highly recommended that you retain a copy of all electronically signed documents for your personal records. We will also retain a copy of the signed document for our records however we may not be able to provide you with a copy of the signed document after a certain period of time."
-msgstr "Na het elektronisch ondertekenen van een document krijg je de mogelijkheid om het document te bekijken, te downloaden en te printen voor je eigen administratie. Het wordt sterk aanbevolen dat je een kopie van alle elektronisch ondertekende documenten bewaart voor je persoonlijke administratie. Wij bewaren ook een kopie van het ondertekende document voor onze administratie, maar mogelijk kunnen we je na een bepaalde tijd geen kopie meer verstrekken."
-
 #: packages/lib/constants/template.ts
 msgid "After submission, a document will be automatically generated and added to your documents page. You will also receive a notification via email."
 msgstr "Na indiening wordt er automatisch een document gegenereerd en toegevoegd aan je documentenpagina. Je ontvangt ook een melding per e-mail."
@@ -1386,10 +1320,6 @@ msgstr "Alle documenten zijn voltooid!"
 #: apps/remix/app/components/tables/documents-table-empty-state.tsx
 msgid "All documents have been processed. Any new documents that are sent or received will show here."
 msgstr "Alle documenten zijn verwerkt. Nieuwe verzonden of ontvangen documenten verschijnen hier."
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "All documents related to the electronic signing process will be provided to you electronically through our platform or via email. It is your responsibility to ensure that your email address is current and that you can receive and open our emails."
-msgstr "Alle documenten die betrekking hebben op het elektronische ondertekeningsproces worden je elektronisch verstrekt via ons platform of per e‑mail. Het is jouw verantwoordelijkheid ervoor te zorgen dat je e‑mailadres actueel is en dat je onze e‑mails kunt ontvangen en openen."
 
 #: apps/remix/app/components/tables/organisation-email-domains-table.tsx
 msgid "All email domains have been synced successfully"
@@ -1484,14 +1414,6 @@ msgstr "Bedrag"
 #: packages/email/templates/document-super-delete.tsx
 msgid "An admin has deleted your document \"{documentName}\"."
 msgstr "Een beheerder heeft je document \"{documentName}\" verwijderd."
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "An electronic signature provided by you on our platform, achieved through clicking through to a document and entering your name, or any other electronic signing method we provide, is legally binding. It carries the same weight and enforceability as a manual signature written with ink on paper."
-msgstr "Een elektronische handtekening die je via ons platform zet, door door te klikken naar een document en je naam in te voeren of via een andere elektronische ondertekeningsmethode die wij aanbieden, is juridisch bindend. Deze heeft dezelfde rechtsgeldigheid en afdwingbaarheid als een met pen op papier geschreven handtekening."
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "An email account"
-msgstr "Een e‑mailaccount"
 
 #: apps/remix/app/components/dialogs/organisation-member-invite-dialog.tsx
 msgid "An email containing an invitation will be sent to each member."
@@ -1711,14 +1633,6 @@ msgstr "Er is een fout opgetreden bij het uploaden van je document."
 msgid "An error occurred. Please try again later."
 msgstr "Er is een fout opgetreden. Probeer het later opnieuw."
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "An organisation wants to create an account for you. Please review the details below."
-msgstr "Een organisatie wil een account voor je aanmaken. Controleer de onderstaande details."
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "An organisation wants to link your account. Please review the details below."
-msgstr "Een organisatie wil je account koppelen. Controleer de onderstaande details."
-
 #: apps/remix/app/components/general/generic-error-layout.tsx
 msgid "An unexpected error occurred."
 msgstr "Er is een onverwachte fout opgetreden."
@@ -1769,7 +1683,6 @@ msgstr "Er is een onverwachte fout opgetreden."
 #: apps/remix/app/components/general/app-command-menu.tsx
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
 msgid "An unknown error occurred"
 msgstr "Er is een onbekende fout opgetreden"
 
@@ -2018,10 +1931,6 @@ msgstr "Auditlogs"
 msgid "Authentication Level"
 msgstr "Authenticatieniveau"
 
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-msgid "Authentication Portal Not Found"
-msgstr "Authenticatieportaal niet gevonden"
-
 #: apps/remix/app/components/general/direct-template/direct-template-signing-auth-page.tsx
 #: apps/remix/app/components/general/document-signing/document-signing-auth-page.tsx
 msgid "Authentication required"
@@ -2051,10 +1960,6 @@ msgstr "Wacht op e‑mailbevestiging"
 #: apps/remix/app/components/general/direct-template/direct-template-signing-form.tsx
 msgid "Back"
 msgstr "Terug"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Back home"
-msgstr "Terug naar startpagina"
 
 #: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
 msgid "Background Color"
@@ -2167,11 +2072,6 @@ msgstr "Bulksgewijs verzenden via CSV"
 msgid "by <0>{senderName}</0>"
 msgstr "door <0>{senderName}</0>"
 
-#. placeholder {0}: organisation.name
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "By accepting this request, you grant {0} the following permissions:"
-msgstr "Door dit verzoek te accepteren, geef je {0} de volgende rechten:"
-
 #: packages/email/templates/confirm-team-email.tsx
 msgid "By accepting this request, you will be granting <0>{teamName}</0> access to:"
 msgstr "Door dit verzoek te accepteren, geef je <0>{teamName}</0> toegang tot:"
@@ -2184,10 +2084,6 @@ msgstr "Door dit document te verwijderen, gebeurt het volgende:"
 msgid "By enabling 2FA, you will be required to enter a code from your authenticator app every time you sign in using email password."
 msgstr "Door 2FA in te schakelen, moet je elke keer dat je inlogt met e-mail en wachtwoord een code uit je authenticator-app invoeren."
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "By proceeding to use the electronic signature service provided by Documenso, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
-msgstr "Door gebruik te maken van de elektronische ondertekeningsdienst van Documenso bevestig je dat je deze kennisgeving hebt gelezen en begrepen. Je gaat akkoord met alle voorwaarden die hier zijn uiteengezet met betrekking tot het gebruik van elektronische handtekeningen en elektronische transacties."
-
 #: apps/remix/app/components/general/document-signing/document-signing-disclosure.tsx
 msgid "By proceeding with your electronic signature, you acknowledge and consent that it will be used to sign the given document and holds the same legal validity as a handwritten signature. By completing the electronic signing process, you affirm your understanding and acceptance of these conditions."
 msgstr "Door verder te gaan met je elektronische handtekening erken en stem je ermee in dat deze wordt gebruikt om het betreffende document te ondertekenen en dat deze dezelfde juridische geldigheid heeft als een handgeschreven handtekening. Door het elektronische ondertekeningsproces te voltooien, bevestig je dat je deze voorwaarden begrijpt en accepteert."
@@ -2195,10 +2091,6 @@ msgstr "Door verder te gaan met je elektronische handtekening erken en stem je e
 #: apps/remix/app/components/forms/signup.tsx
 msgid "By proceeding, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Door verder te gaan ga je akkoord met onze <0>Servicevoorwaarden</0> en <1>Privacyverklaring</1>."
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "By using the electronic signature feature, you are consenting to conduct transactions and receive disclosures electronically. You acknowledge that your electronic signature on documents is binding and that you accept the terms outlined in the documents you are signing."
-msgstr "Door de functie voor elektronische handtekeningen te gebruiken, stem je ermee in transacties uit te voeren en kennisgevingen elektronisch te ontvangen. Je erkent dat je elektronische handtekening onder documenten bindend is en dat je de voorwaarden van de te ondertekenen documenten accepteert."
 
 #: packages/ui/components/recipient/recipient-role-select.tsx
 msgid "Can prepare"
@@ -2669,23 +2561,13 @@ msgstr "Bevestig door te typen: <0>{deleteMessage}</0>"
 msgid "Confirm Deletion"
 msgstr "Verwijdering bevestigen"
 
-#: apps/remix/app/routes/_unauthenticated+/unverified-account.tsx
 #: packages/email/template-components/template-confirmation-email.tsx
 msgid "Confirm email"
 msgstr "E‑mail bevestigen"
 
 #: apps/remix/app/components/forms/send-confirmation-email.tsx
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
 msgid "Confirmation email sent"
 msgstr "Bevestigingsmail verzonden"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Consent to Electronic Transactions"
-msgstr "Toestemming voor elektronische transacties"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Contact Information"
-msgstr "Contactgegevens"
 
 #: apps/remix/app/components/dialogs/organisation-create-dialog.tsx
 msgid "Contact sales here"
@@ -2710,10 +2592,6 @@ msgstr "Context"
 #: apps/remix/app/components/embed/authoring/configure-document-view.tsx
 #: apps/remix/app/components/general/billing-plans.tsx
 #: apps/remix/app/components/general/document-signing/document-signing-form.tsx
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 #: packages/ui/primitives/document-flow/document-flow-root.tsx
 msgid "Continue"
 msgstr "Doorgaan"
@@ -2737,10 +2615,6 @@ msgstr "Ga verder door het document te ondertekenen."
 #: packages/email/template-components/template-document-invite.tsx
 msgid "Continue by viewing the document."
 msgstr "Ga verder door het document te bekijken."
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
-msgid "Continue to login"
-msgstr "Doorgaan naar inloggen"
 
 #: apps/remix/app/components/forms/email-preferences-form.tsx
 msgid "Controls the default email settings when new documents or templates are created"
@@ -2873,7 +2747,6 @@ msgid "Create a team to collaborate with your team members."
 msgstr "Maak een team aan om samen te werken met je teamleden."
 
 #: apps/remix/app/components/forms/signup.tsx
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
 #: packages/email/template-components/template-document-self-signed.tsx
 msgid "Create account"
 msgstr "Account aanmaken"
@@ -3017,10 +2890,6 @@ msgstr "Webhook aanmaken"
 msgid "Create Webhook"
 msgstr "Webhook aanmaken"
 
-#: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
-msgid "Create your account and start using state-of-the-art document signing."
-msgstr "Maak je account aan en begin met het gebruik van moderne documentenondertekening."
-
 #: apps/remix/app/components/forms/signup.tsx
 msgid "Create your account and start using state-of-the-art document signing. Open and beautiful signing is within your grasp."
 msgstr "Maak je account aan en begin met het gebruik van moderne documentenondertekening. Open en prachtig ondertekenen ligt binnen handbereik."
@@ -3145,7 +3014,6 @@ msgid "David is the Employee, Lucas is the Manager"
 msgstr "David is de werknemer, Lucas is de manager"
 
 #: apps/remix/app/components/general/organisations/organisation-invitations.tsx
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
 #: packages/email/templates/organisation-invite.tsx
 msgid "Decline"
 msgstr "Weigeren"
@@ -3987,11 +3855,6 @@ msgstr "Domein al in gebruik"
 msgid "Domain Name"
 msgstr "Domeinnaam"
 
-#: apps/remix/app/routes/_unauthenticated+/reset-password.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/signin.tsx
-msgid "Don't have an account? <0>Sign up</0>"
-msgstr "Nog geen account? <0>Registreer</0>"
-
 #: apps/remix/app/components/dialogs/team-delete-dialog.tsx
 #: apps/remix/app/components/dialogs/team-delete-dialog.tsx
 msgid "Don't transfer (Delete all documents)"
@@ -4163,14 +4026,6 @@ msgstr "bijv. Legal"
 msgid "eg. Mac"
 msgstr "bijv. Mac"
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Electronic Delivery of Documents"
-msgstr "Elektronische levering van documenten"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Electronic Signature Disclosure"
-msgstr "Kennisgeving elektronische handtekening"
-
 #: apps/remix/app/components/dialogs/ai-field-detection-dialog.tsx
 #: apps/remix/app/components/dialogs/assistant-confirmation-dialog.tsx
 #: apps/remix/app/components/dialogs/team-email-add-dialog.tsx
@@ -4229,17 +4084,9 @@ msgstr "E‑mailadres"
 msgid "Email Address"
 msgstr "E‑mailadres"
 
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Email already confirmed"
-msgstr "E-mailadres al bevestigd"
-
 #: apps/remix/app/components/dialogs/organisation-email-create-dialog.tsx
 msgid "Email already exists"
 msgstr "E-mailadres bestaat al"
-
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Email Confirmed!"
-msgstr "E‑mail bevestigd!"
 
 #: apps/remix/app/components/dialogs/organisation-email-create-dialog.tsx
 msgid "Email Created"
@@ -4298,10 +4145,6 @@ msgstr "E-mails afzender"
 msgctxt "Audit log format"
 msgid "Email sent"
 msgstr ""
-
-#: apps/remix/app/routes/_unauthenticated+/check-email.tsx
-msgid "Email sent!"
-msgstr "E‑mail verzonden!"
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-fields-page.tsx
 msgid "Email Settings"
@@ -4641,14 +4484,6 @@ msgstr "Envelope bijgewerkt"
 msgid "Error"
 msgstr "Fout"
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Error declining account link"
-msgstr "Fout bij weigeren van accountkoppeling"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Error linking account"
-msgstr "Fout bij koppelen van account"
-
 #: apps/remix/app/components/embed/authoring/configure-document-upload.tsx
 msgid "Error uploading file"
 msgstr "Fout bij uploaden van bestand"
@@ -4941,10 +4776,6 @@ msgstr "Map succesvol bijgewerkt"
 msgid "Font Size"
 msgstr "Lettergrootte"
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "For any questions regarding this disclosure, electronic signatures, or any related process, please contact us at: <0>{SUPPORT_EMAIL}</0>"
-msgstr "Voor vragen over deze kennisgeving, elektronische handtekeningen of een gerelateerd proces kun je contact met ons opnemen via: <0>{SUPPORT_EMAIL}</0>"
-
 #: apps/remix/app/components/dialogs/template-bulk-send-dialog.tsx
 msgid "For each recipient, provide their email (required) and name (optional) in separate columns. Download the template CSV below for the correct format."
 msgstr "Geef voor elke ontvanger zijn of haar e-mailadres (vereist) en naam (optioneel) op in aparte kolommen. Download hieronder de sjabloon-CSV voor de juiste indeling."
@@ -4957,8 +4788,6 @@ msgstr "Als de claim bijvoorbeeld een nieuwe flag \"FLAG_1\" op true heeft staan
 msgid "Forgot Password?"
 msgstr "Wachtwoord vergeten?"
 
-#: apps/remix/app/components/forms/signin.tsx
-#: apps/remix/app/routes/_unauthenticated+/forgot-password.tsx
 #: packages/email/template-components/template-forgot-password.tsx
 msgid "Forgot your password?"
 msgstr "Wachtwoord vergeten?"
@@ -5026,7 +4855,6 @@ msgstr "Globale ontvangeractie-authenticatie"
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id._index.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id._index.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/templates.$id._index.tsx
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
 msgid "Go back"
 msgstr "Ga terug"
 
@@ -5041,16 +4869,8 @@ msgstr "Ga terug"
 msgid "Go Back"
 msgstr "Ga terug"
 
-#: apps/remix/app/routes/_unauthenticated+/verify-email._index.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Go back home"
-msgstr "Terug naar home"
-
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
-#: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 msgid "Go Back Home"
 msgstr "Terug naar home"
 
@@ -5230,10 +5050,6 @@ msgstr "Home (geen map)"
 msgid "Horizontal"
 msgstr "Horizontaal"
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "I agree to link my account with this organization"
-msgstr "Ik ga akkoord met het koppelen van mijn account aan deze organisatie"
-
 #: packages/lib/constants/recipient-roles.ts
 msgid "I am a signer of this document"
 msgstr "Ik ben een ondertekenaar van dit document"
@@ -5258,10 +5074,6 @@ msgstr "Ik moet een kopie van dit document ontvangen"
 #: packages/lib/server-only/pdf/render-certificate.ts
 msgid "I am the owner of this document"
 msgstr "Ik ben de eigenaar van dit document"
-
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-msgid "I understand that I am providing my credentials to a 3rd party service configured by this organisation"
-msgstr "Ik begrijp dat ik mijn inloggegevens verstrek aan een externe dienst die door deze organisatie is ingesteld"
 
 #: apps/remix/app/components/dialogs/token-delete-dialog.tsx
 msgid "I'm sure! Delete it"
@@ -5297,17 +5109,9 @@ msgstr "Als u deze verificatiecode niet heeft aangevraagd, kunt u deze e-mail ve
 msgid "If you do not want to use the authenticator prompted, you can close it, which will then display the next available authenticator."
 msgstr "Als je de voorgestelde authenticator niet wilt gebruiken, kun je deze sluiten; vervolgens wordt de volgende beschikbare authenticator weergegeven."
 
-#: apps/remix/app/routes/_unauthenticated+/unverified-account.tsx
-msgid "If you don't find the confirmation link in your inbox, you can request a new one below."
-msgstr "Als je de bevestigingslink niet in je inbox vindt, kun je hieronder een nieuwe aanvragen."
-
 #: apps/remix/app/components/forms/2fa/enable-authenticator-app-dialog.tsx
 msgid "If your authenticator app does not support QR codes, you can use the following code instead:"
 msgstr "Als je authenticator‑app geen QR‑codes ondersteunt, kun je in plaats daarvan de volgende code gebruiken:"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Important: What This Means"
-msgstr "Belangrijk: wat dit betekent"
 
 #: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 msgctxt "Subscription status"
@@ -5417,19 +5221,6 @@ msgstr ""
 msgid "Invalid License Type - Your Documenso instance is using features that are not part of your license."
 msgstr ""
 
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-msgid "Invalid link"
-msgstr "Ongeldige link"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.decline.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
-msgid "Invalid token"
-msgstr "Ongeldig token"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Invalid Token"
-msgstr "Ongeldige token"
-
 #: apps/remix/app/components/forms/reset-password.tsx
 msgid "Invalid token provided. Please try again."
 msgstr "Er is een ongeldig token opgegeven. Probeer het opnieuw."
@@ -5438,12 +5229,7 @@ msgstr "Er is een ongeldig token opgegeven. Probeer het opnieuw."
 msgid "Invitation accepted"
 msgstr "Uitnodiging geaccepteerd"
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
-msgid "Invitation accepted!"
-msgstr "Uitnodiging geaccepteerd!"
-
 #: apps/remix/app/components/general/organisations/organisation-invitations.tsx
-#: apps/remix/app/routes/_unauthenticated+/organisation.decline.$token.tsx
 msgid "Invitation declined"
 msgstr "Uitnodiging geweigerd"
 
@@ -5503,10 +5289,6 @@ msgstr "IP‑adres"
 msgid "Issuer URL"
 msgstr "Issuer-URL"
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "It is crucial to keep your contact information, especially your email address, up to date with us. Please notify us immediately of any changes to ensure that you continue to receive all necessary communications."
-msgstr "Het is essentieel dat je je contactgegevens, met name je e‑mailadres, up‑to‑date houdt. Stel ons onmiddellijk op de hoogte van wijzigingen om ervoor te zorgen dat je alle noodzakelijke communicatie blijft ontvangen."
-
 #. placeholder {0}: publicProfile.name
 #: apps/remix/app/routes/_profile+/p.$url.tsx
 msgid "It looks like {0} hasn't added any documents to their profile yet."
@@ -5515,14 +5297,6 @@ msgstr "Het lijkt erop dat {0} nog geen documenten aan zijn profiel heeft toegev
 #: apps/remix/app/components/embed/multisign/multi-sign-document-list.tsx
 msgid "It looks like we ran into an issue!"
 msgstr "Het lijkt erop dat we een probleem zijn tegengekomen!"
-
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "It seems that the provided token has expired. We've just sent you another token, please check your email and try again."
-msgstr "Het lijkt erop dat het opgegeven token is verlopen. We hebben je zojuist een nieuw token gestuurd; controleer je e‑mail en probeer het opnieuw."
-
-#: apps/remix/app/routes/_unauthenticated+/verify-email._index.tsx
-msgid "It seems that there is no token provided, if you are trying to verify your email please follow the link in your email."
-msgstr "Het lijkt erop dat er geen token is opgegeven; als je je e‑mail probeert te verifiëren, volg dan de link in je e‑mail."
 
 #: apps/remix/app/components/embed/embed-document-waiting-for-turn.tsx
 msgid "It's currently not your turn to sign. Please check back soon as this document should be available for you to sign shortly."
@@ -5649,10 +5423,6 @@ msgstr "Organisatie verlaten"
 #: apps/remix/app/components/forms/editor/editor-field-generic-field-forms.tsx
 msgid "Left"
 msgstr "Links"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Legality of Electronic Signatures"
-msgstr "Rechtsgeldigheid van elektronische handtekeningen"
 
 #: apps/remix/app/components/forms/editor/editor-field-generic-field-forms.tsx
 msgid "Letter spacing"
@@ -6163,10 +5933,6 @@ msgstr "Naam is verplicht"
 msgid "Name Settings"
 msgstr "Naam-instellingen"
 
-#: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
-msgid "Need to sign documents?"
-msgstr "Moet je documenten ondertekenen?"
-
 #: packages/ui/components/recipient/recipient-role-select.tsx
 msgid "Needs to approve"
 msgstr "Moet goedkeuren"
@@ -6356,10 +6122,6 @@ msgstr "Geen geldige ontvangers gevonden"
 msgid "No value found."
 msgstr "Geen waarde gevonden."
 
-#: apps/remix/app/routes/_unauthenticated+/forgot-password.tsx
-msgid "No worries, it happens! Enter your email and we'll email you a special link to reset your password."
-msgstr "Geen zorgen, dat gebeurt wel eens! Vul je e‑mail in en we sturen je een speciale link om je wachtwoord te resetten."
-
 #: apps/remix/app/components/embed/authoring/configure-document-advanced-settings.tsx
 #: apps/remix/app/components/forms/editor/editor-field-number-form.tsx
 #: apps/remix/app/components/tables/admin-claims-table.tsx
@@ -6503,10 +6265,6 @@ msgstr "Opties"
 msgid "Or"
 msgstr "Of"
 
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-msgid "OR"
-msgstr "OF"
-
 #: apps/remix/app/components/forms/signin.tsx
 msgid "Or continue with"
 msgstr "Of ga verder met"
@@ -6515,7 +6273,6 @@ msgstr "Of ga verder met"
 #: apps/remix/app/components/tables/admin-user-teams-table.tsx
 #: apps/remix/app/components/tables/user-billing-organisations-table.tsx
 #: apps/remix/app/components/tables/user-organisations-table.tsx
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
 msgid "Organisation"
 msgstr "Organisatie"
 
@@ -6548,10 +6305,6 @@ msgstr "Organisatie is succesvol bijgewerkt"
 #: apps/remix/app/routes/_authenticated+/admin+/organisation-insights._index.tsx
 msgid "Organisation Insights"
 msgstr "Organisatie-inzichten"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
-msgid "Organisation invitation"
-msgstr "Organisatie-uitnodiging"
 
 #: apps/remix/app/components/dialogs/organisation-member-invite-dialog.tsx
 msgid "Organisation invitations have been sent."
@@ -6908,10 +6661,6 @@ msgstr "Raadpleeg de hoofdapplicatie voor meer informatie."
 #: apps/remix/app/routes/_recipient+/sign.$token+/waiting.tsx
 msgid "Please check your email for updates."
 msgstr "Controleer je e‑mail voor updates."
-
-#: apps/remix/app/routes/_unauthenticated+/reset-password.$token.tsx
-msgid "Please choose your new password"
-msgstr "Kies je nieuwe wachtwoord"
 
 #: apps/remix/app/components/general/document-signing/document-signing-mobile-widget.tsx
 #: apps/remix/app/components/general/document-signing/document-signing-mobile-widget.tsx
@@ -7470,10 +7219,6 @@ msgstr "Reden van weigering: {reason}"
 msgid "Reload"
 msgstr "Opnieuw laden"
 
-#: apps/remix/app/routes/_unauthenticated+/forgot-password.tsx
-msgid "Remembered your password? <0>Sign In</0>"
-msgstr "Weet je je wachtwoord weer? <0>Log in</0>"
-
 #. placeholder {0}: envelope.documentMeta.subject
 #: packages/lib/server-only/document/resend-document.ts
 msgid "Reminder: {0}"
@@ -7560,10 +7305,6 @@ msgstr "Antwoord op e-mail <0>(optioneel)</0>"
 msgid "Request"
 msgstr "Verzoek"
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Requesting Organisation"
-msgstr "Aanvragende organisatie"
-
 #: packages/lib/constants/document-auth.ts
 msgid "Require 2FA"
 msgstr "2FA vereisen"
@@ -7642,7 +7383,6 @@ msgstr "Resetmail verzonden"
 
 #: apps/remix/app/components/forms/forgot-password.tsx
 #: apps/remix/app/components/forms/reset-password.tsx
-#: apps/remix/app/routes/_unauthenticated+/reset-password.$token.tsx
 #: packages/email/template-components/template-forgot-password.tsx
 msgid "Reset Password"
 msgstr "Wachtwoord resetten"
@@ -7687,10 +7427,6 @@ msgstr "Wees gerust, je document is strikt vertrouwelijk en wordt nooit gedeeld.
 msgid "Restricted Access"
 msgstr "Beperkte toegang"
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Retention of Documents"
-msgstr "Bewaring van documenten"
-
 #: apps/remix/app/components/tables/admin-document-jobs-table.tsx
 msgid "Retried"
 msgstr "Opnieuw geprobeerd"
@@ -7700,10 +7436,6 @@ msgid "Retry"
 msgstr "Opnieuw proberen"
 
 #: apps/remix/app/components/general/document-signing/document-signing-page-view-v2.tsx
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-#: apps/remix/app/routes/_unauthenticated+/organisation.decline.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Return"
 msgstr "Terugkeren"
 
@@ -7712,22 +7444,9 @@ msgstr "Terugkeren"
 msgid "Return Home"
 msgstr "Terug naar startpagina"
 
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-msgid "Return to Documenso sign in page here"
-msgstr "Ga hier terug naar de Documenso-aanmeldpagina"
-
 #: apps/remix/app/components/general/envelope-editor/envelope-editor.tsx
 msgid "Return to documents"
 msgstr "Terug naar documenten"
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.decline.$token.tsx
-msgid "Return to Home"
-msgstr "Terug naar home"
-
-#: apps/remix/app/routes/_unauthenticated+/check-email.tsx
-#: apps/remix/app/routes/_unauthenticated+/reset-password._index.tsx
-msgid "Return to sign in"
-msgstr "Terug naar inloggen"
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor.tsx
 msgid "Return to templates"
@@ -8315,14 +8034,11 @@ msgstr "Hier tekenen"
 
 #: apps/remix/app/components/forms/signin.tsx
 #: apps/remix/app/components/forms/signin.tsx
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
 #: packages/email/template-components/template-reset-password.tsx
 msgid "Sign In"
 msgstr "Inloggen"
 
 #: apps/remix/app/components/general/document-signing/document-signing-auth-dialog.tsx
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-#: apps/remix/app/routes/_unauthenticated+/signin.tsx
 msgid "Sign in to your account"
 msgstr "Log in op je account"
 
@@ -8556,16 +8272,9 @@ msgstr "Sommige ondertekenaars hebben geen handtekeningveld toegewezen gekregen.
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.branding.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.branding.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.public-profile.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 #: packages/ui/components/document/document-share-button.tsx
 msgid "Something went wrong"
 msgstr "Er is iets misgegaan"
-
-#. placeholder {0}: data.teamName
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-msgid "Something went wrong while attempting to verify your email address for <0>{0}</0>. Please try again later."
-msgstr "Er is iets misgegaan bij het verifiëren van je e‑mailadres voor <0>{0}</0>. Probeer het later opnieuw."
 
 #: apps/remix/app/components/dialogs/ai-field-detection-dialog.tsx
 msgid "Something went wrong while detecting fields."
@@ -8852,10 +8561,6 @@ msgctxt "Audit log format"
 msgid "System auto inserted fields"
 msgstr "Systeem heeft automatisch velden ingevoegd"
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "System Requirements"
-msgstr "Systeemvereisten"
-
 #: apps/remix/app/components/general/app-command-menu.tsx
 msgid "System Theme"
 msgstr "Systeemthema"
@@ -8895,10 +8600,6 @@ msgstr "Team‑e‑mail"
 msgid "Team Email"
 msgstr "Team‑e‑mail"
 
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-msgid "Team email already verified!"
-msgstr "Team‑e‑mail al geverifieerd!"
-
 #: apps/remix/app/components/dialogs/team-email-delete-dialog.tsx
 msgid "Team email has been removed"
 msgstr "Team‑e‑mail is verwijderd"
@@ -8915,14 +8616,6 @@ msgstr "Teame-mailadres verwijderd"
 #: packages/email/templates/team-email-removed.tsx
 msgid "Team email removed for {teamName} on Documenso"
 msgstr "Teame-mailadres verwijderd voor {teamName} op Documenso"
-
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-msgid "Team email verification"
-msgstr "Verificatie van team‑e‑mail"
-
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-msgid "Team email verified!"
-msgstr "Team‑e‑mail geverifieerd!"
 
 #: apps/remix/app/components/dialogs/team-email-update-dialog.tsx
 msgid "Team email was updated."
@@ -9165,10 +8858,6 @@ msgstr "Tekst-instellingen"
 msgid "Thank you for completing the signing process."
 msgstr "Bedankt dat je het ondertekeningsproces hebt voltooid."
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Thank you for using Documenso to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
-msgstr "Bedankt dat je Documenso gebruikt om je documenten elektronisch te ondertekenen. Het doel van deze kennisgeving is je te informeren over het proces, de rechtsgeldigheid en je rechten met betrekking tot het gebruik van elektronische handtekeningen op ons platform. Door te kiezen voor een elektronische handtekening ga je akkoord met de onderstaande voorwaarden."
-
 #: packages/email/template-components/template-forgot-password.tsx
 msgid "That's okay, it happens! Click the button below to reset your password."
 msgstr "Geeft niets, dat kan gebeuren! Klik op de onderstaande knop om je wachtwoord te resetten."
@@ -9338,10 +9027,6 @@ msgstr "Het volgende team is verwijderd. Je hebt geen toegang meer tot dit team 
 msgid "The OpenID discovery endpoint URL for your provider"
 msgstr "De OpenID-discovery-endpoint-URL voor uw provider"
 
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-msgid "The organisation authentication portal does not exist, or is not configured"
-msgstr "Het authenticatieportaal van de organisatie bestaat niet of is niet geconfigureerd"
-
 #: apps/remix/app/components/dialogs/organisation-email-create-dialog.tsx
 msgid "The organisation email has been created successfully."
 msgstr "Het organisatiemailadres is succesvol aangemaakt."
@@ -9472,10 +9157,6 @@ msgstr "De sjabloon die u zoekt, is mogelijk verwijderd, hernoemd of heeft missc
 msgid "The test webhook has been successfully sent to your endpoint."
 msgstr "De testwebhook is succesvol naar je endpoint verzonden."
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "The token is invalid or has expired."
-msgstr "De token is ongeldig of is verlopen."
-
 #: apps/remix/app/components/forms/token.tsx
 msgid "The token was copied to your clipboard."
 msgstr "Het token is naar je klembord gekopieerd."
@@ -9483,10 +9164,6 @@ msgstr "Het token is naar je klembord gekopieerd."
 #: apps/remix/app/components/dialogs/token-delete-dialog.tsx
 msgid "The token was deleted successfully."
 msgstr "Het token is succesvol verwijderd."
-
-#: apps/remix/app/routes/_unauthenticated+/reset-password._index.tsx
-msgid "The token you have used to reset your password is either expired or it never existed. If you have still forgotten your password, please request a new reset link."
-msgstr "Het token waarmee je je wachtwoord probeerde te resetten, is verlopen of heeft nooit bestaan. Als je je wachtwoord nog steeds bent vergeten, vraag dan een nieuwe resetlink aan."
 
 #: apps/remix/app/components/forms/signin.tsx
 msgid "The two-factor authentication code provided is incorrect."
@@ -9647,6 +9324,10 @@ msgstr "Dit document is beschikbaar in je Documenso-account. Je kunt daar meer d
 msgid "This document is currently a draft and has not been sent"
 msgstr "Dit document is momenteel een concept en is nog niet verzonden"
 
+#: packages/email/template-components/template-document-completed.tsx
+msgid "This document is now fully signed."
+msgstr ""
+
 #: apps/remix/app/components/general/legacy-field-warning-popover.tsx
 msgid "This document is using legacy field insertion, we recommend using the new field insertion method for more accurate results."
 msgstr "Dit document gebruikt verouderde veldinvoeging. We raden aan de nieuwe methode voor veldinvoeging te gebruiken voor nauwkeurigere resultaten."
@@ -9728,14 +9409,6 @@ msgstr "Dit is de URL die gebruikers zullen gebruiken om bij uw organisatie in t
 msgid "This item cannot be deleted"
 msgstr "Dit item kan niet worden verwijderd"
 
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-msgid "This link is invalid or has expired. Please contact your team to resend a verification."
-msgstr "Deze link is ongeldig of verlopen. Neem contact op met je team om de verificatie opnieuw te laten verzenden."
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "This organisation will have administrative control over your account. You can revoke this access later, but they will retain access to any data they've already collected."
-msgstr "Deze organisatie krijgt administratieve controle over uw account. U kunt deze toegang later intrekken, maar zij behouden toegang tot alle gegevens die zij al hebben verzameld."
-
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.general.tsx
 msgid "This organisation, and any associated data will be permanently deleted."
 msgstr "Deze organisatie en alle bijbehorende gegevens worden permanent verwijderd."
@@ -9777,14 +9450,6 @@ msgstr "Deze sjabloon gebruikt verouderde veldinvoeging. We raden aan de nieuwe 
 #: apps/remix/app/components/dialogs/envelope-duplicate-dialog.tsx
 msgid "This template will be duplicated."
 msgstr "Deze sjabloon wordt gedupliceerd."
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.decline.$token.tsx
-msgid "This token is invalid or has expired. No action is needed."
-msgstr "Dit token is ongeldig of verlopen. Er is geen actie nodig."
-
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
-msgid "This token is invalid or has expired. Please contact your team for a new invitation."
-msgstr "Dit token is ongeldig of verlopen. Neem contact op met je team voor een nieuwe uitnodiging."
 
 #: apps/remix/app/components/dialogs/team-create-dialog.tsx
 #: apps/remix/app/components/forms/organisation-update-form.tsx
@@ -9866,10 +9531,6 @@ msgstr "Om deze {1} te {0}, moet u zijn ingelogd als <0>{2}</0>"
 msgid "To {0} this {1}, you need to be logged in."
 msgstr "Om deze {1} te {0}, moet u zijn ingelogd."
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
-msgid "To accept this invitation you must create an account."
-msgstr "Om deze uitnodiging te accepteren, moet je een account aanmaken."
-
 #: apps/remix/app/components/dialogs/team-member-create-dialog.tsx
 msgid "To add members to this team, you must first add them to the organisation."
 msgstr ""
@@ -9900,11 +9561,6 @@ msgstr "Voer ter bevestiging de reden in"
 msgid "To enable two-factor authentication, scan the following QR code using your authenticator app."
 msgstr "Om twee‑factor‑authenticatie in te schakelen, scan je de volgende QR‑code met je authenticator‑app."
 
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-#: apps/remix/app/routes/_unauthenticated+/unverified-account.tsx
-msgid "To gain access to your account, please confirm your email address by clicking on the confirmation link from your inbox."
-msgstr "Om toegang te krijgen tot je account, moet je je e‑mailadres bevestigen door op de bevestigingslink in je inbox te klikken."
-
 #. placeholder {0}: recipient.email
 #: apps/remix/app/components/general/document-signing/document-signing-auth-account.tsx
 msgid "To mark this document as viewed, you need to be logged in as <0>{0}</0>"
@@ -9920,10 +9576,6 @@ msgstr "Om dit document als bekeken te markeren, moet u zijn ingelogd."
 #: packages/ui/primitives/template-flow/add-template-fields.tsx
 msgid "To proceed further, please set at least one value for the {0} field."
 msgstr "Stel ten minste één waarde in voor het veld {0} om verder te gaan."
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "To use our electronic signature service, you must have access to:"
-msgstr "Om onze dienst voor elektronische handtekeningen te gebruiken, moet je toegang hebben tot:"
 
 #: apps/remix/app/components/embed/embed-authentication-required.tsx
 msgid "To view this document you need to be signed into your account, please sign in to continue."
@@ -10076,10 +9728,6 @@ msgstr "Typ uw handtekening"
 msgid "Typed signatures are not allowed. Please draw your signature."
 msgstr "Getypte handtekeningen zijn niet toegestaan. Teken je handtekening."
 
-#: apps/remix/app/routes/_unauthenticated+/verify-email._index.tsx
-msgid "Uh oh! Looks like you're missing a token"
-msgstr "Oei! Het lijkt erop dat je een token mist"
-
 #: apps/remix/app/components/general/app-command-menu.tsx
 msgid "Unable to change the language at this time. Please try again later."
 msgstr "De taal kan nu niet worden gewijzigd. Probeer het later opnieuw."
@@ -10143,10 +9791,6 @@ msgstr "Kan uitnodiging niet opnieuw verzenden. Probeer het opnieuw."
 #: apps/remix/app/components/general/teams/team-email-dropdown.tsx
 msgid "Unable to resend verification at this time. Please try again."
 msgstr "Kan verificatie nu niet opnieuw verzenden. Probeer het opnieuw."
-
-#: apps/remix/app/routes/_unauthenticated+/reset-password._index.tsx
-msgid "Unable to reset password"
-msgstr "Kan wachtwoord niet resetten"
 
 #: apps/remix/app/components/forms/2fa/enable-authenticator-app-dialog.tsx
 #: apps/remix/app/components/forms/2fa/enable-authenticator-app-dialog.tsx
@@ -10344,10 +9988,6 @@ msgstr "{organisationMemberName} is bijgewerkt naar {roleLabel}."
 #: apps/remix/app/components/forms/password.tsx
 msgid "Updating password..."
 msgstr "Wachtwoord wordt bijgewerkt..."
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Updating Your Information"
-msgstr "Je gegevens bijwerken"
 
 #: packages/ui/primitives/document-dropzone.tsx
 #: packages/ui/primitives/document-upload-button.tsx
@@ -10672,7 +10312,6 @@ msgstr "Document bekijken"
 #: apps/remix/app/components/general/document-signing/document-signing-page-view-v1.tsx
 #: apps/remix/app/components/general/document-signing/document-signing-page-view-v2.tsx
 #: packages/email/template-components/template-document-invite.tsx
-#: packages/email/template-components/template-document-rejected.tsx
 #: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/ui/primitives/document-flow/add-subject.tsx
@@ -10977,7 +10616,6 @@ msgstr "Er is een onbekende fout opgetreden bij het intrekken van de toegang. Pr
 #: apps/remix/app/components/forms/signin.tsx
 #: apps/remix/app/components/forms/signin.tsx
 #: apps/remix/app/components/forms/signin.tsx
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
 msgid "We encountered an unknown error while attempting to sign you In. Please try again later."
 msgstr "Er is een onbekende fout opgetreden bij het inloggen. Probeer het later opnieuw."
 
@@ -11101,14 +10739,6 @@ msgstr "We konden je e-mailvoorkeuren op dit moment niet bijwerken, probeer het 
 msgid "We were unable to verify your details. Please try again or contact support"
 msgstr "We konden je gegevens niet verifiëren. Probeer het opnieuw of neem contact op met support"
 
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "We were unable to verify your email at this time."
-msgstr "We konden je e-mailadres op dit moment niet verifiëren."
-
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "We were unable to verify your email. If your email is not verified already, please try again."
-msgstr "We konden je e‑mail niet verifiëren. Als je e‑mail nog niet is geverifieerd, probeer het dan opnieuw."
-
 #: apps/remix/app/components/dialogs/envelope-distribute-dialog.tsx
 #: apps/remix/app/components/dialogs/template-use-dialog.tsx
 #: packages/ui/primitives/document-flow/add-subject.tsx
@@ -11199,21 +10829,9 @@ msgstr "Webhook‑URL"
 msgid "Webhooks"
 msgstr "Webhooks"
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Welcome"
-msgstr "Welkom"
-
-#: apps/remix/app/routes/_unauthenticated+/signin.tsx
-msgid "Welcome back, we are lucky to have you."
-msgstr "Welkom terug, we boffen met je."
-
 #: apps/remix/app/routes/_authenticated+/dashboard.tsx
 msgid "Welcome back! Here's an overview of your account."
 msgstr "Welkom terug! Hier is een overzicht van je account."
-
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-msgid "Welcome to {organisationName}"
-msgstr "Welkom bij {organisationName}"
 
 #: packages/email/template-components/template-confirmation-email.tsx
 msgid "Welcome to Documenso!"
@@ -11246,10 +10864,6 @@ msgstr "Wanneer je op Doorgaan klikt, wordt je gevraagd de eerste beschikbare au
 msgid "When you sign a document, we can automatically fill in and sign the following fields using information that has already been provided. You can also manually sign or remove any automatically signed fields afterwards if you desire."
 msgstr "Wanneer je een document ondertekent, kunnen we de volgende velden automatisch invullen en ondertekenen met informatie die al is opgegeven. Je kunt automatisch ondertekende velden achteraf ook handmatig ondertekenen of verwijderen als je dat wilt."
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "When you use our platform to affix your electronic signature to documents, you are consenting to do so under the Electronic Signatures in Global and National Commerce Act (E-Sign Act) and other applicable laws. This action indicates your agreement to use electronic means to sign documents and receive notifications."
-msgstr "Wanneer je ons platform gebruikt om je elektronische handtekening op documenten te plaatsen, doe je dat onder de Electronic Signatures in Global and National Commerce Act (E‑Sign Act) en andere toepasselijke wetgeving. Deze handeling geeft aan dat je ermee instemt documenten elektronisch te ondertekenen en meldingen elektronisch te ontvangen."
-
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 msgid "Whether to enable the SSO portal for your organisation"
 msgstr "Of het SSO-portaal voor uw organisatie moet worden ingeschakeld"
@@ -11265,10 +10879,6 @@ msgstr "Whitelabeling, onbeperkte leden en meer"
 #: apps/remix/app/components/dialogs/document-resend-dialog.tsx
 msgid "Who do you want to remind?"
 msgstr "Wie wil je herinneren?"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Withdrawing Consent"
-msgstr "Toestemming intrekken"
 
 #: apps/remix/app/components/forms/public-profile-form.tsx
 msgid "Write a description to display on your public profile"
@@ -11491,6 +11101,10 @@ msgstr "Je kunt hier je e-mailvoorkeuren beheren."
 msgid "You can only detect fields in draft envelopes"
 msgstr "U kunt alleen velden detecteren in concept-enveloppen"
 
+#: packages/email/template-components/template-document-rejected.tsx
+msgid "You can review this rejection from your document dashboard."
+msgstr ""
+
 #: packages/email/templates/confirm-team-email.tsx
 msgid "You can revoke access at any time in your team settings on Documenso <0>here</0>."
 msgstr "Je kunt de toegang op elk moment intrekken in je teaminstellingen op Documenso, <0>hier</0>."
@@ -11510,10 +11124,6 @@ msgstr "Je kunt documenten die aan dit e‑mailadres zijn gekoppeld bekijken en 
 #: packages/email/templates/bulk-send-complete.tsx
 msgid "You can view the created documents in your dashboard under the \"Documents created from template\" section."
 msgstr "Je kunt de aangemaakte documenten bekijken in je dashboard onder het gedeelte \"Documents created from template\"."
-
-#: packages/email/template-components/template-document-rejected.tsx
-msgid "You can view the document and its status by clicking the button below."
-msgstr "Je kunt het document en de status ervan bekijken door op de onderstaande knop te klikken."
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-recipient-form.tsx
 #: packages/ui/primitives/document-flow/add-signers.tsx
@@ -11606,21 +11216,6 @@ msgstr "Je hoeft het niet meer te ondertekenen."
 msgid "You failed to validate a 2FA token for the document"
 msgstr ""
 
-#. placeholder {0}: data.organisationName
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
-msgid "You have accepted an invitation from <0>{0}</0> to join their organisation."
-msgstr "Je hebt een uitnodiging van <0>{0}</0> geaccepteerd om lid te worden van hun organisatie."
-
-#. placeholder {0}: data.teamName
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-msgid "You have already verified your email address for <0>{0}</0>."
-msgstr "Je hebt je e‑mailadres voor <0>{0}</0> al geverifieerd."
-
-#. placeholder {0}: data.organisationName
-#: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
-msgid "You have been invited by <0>{0}</0> to join their organisation."
-msgstr "Je bent door <0>{0}</0> uitgenodigd om lid te worden van hun organisatie."
-
 #. placeholder {0}: organisation.name
 #: packages/lib/server-only/organisation/create-organisation-member-invites.ts
 msgid "You have been invited to join {0} on Documenso"
@@ -11638,11 +11233,6 @@ msgstr "Je bent verwijderd uit een document"
 #: apps/remix/app/components/embed/multisign/multi-sign-document-list.tsx
 msgid "You have been requested to sign the following documents. Review each document carefully and complete the signing process."
 msgstr "Je bent gevraagd de volgende documenten te ondertekenen. Bekijk elk document zorgvuldig en voltooi het ondertekeningsproces."
-
-#. placeholder {0}: data.organisationName
-#: apps/remix/app/routes/_unauthenticated+/organisation.decline.$token.tsx
-msgid "You have declined the invitation from <0>{0}</0> to join their organisation."
-msgstr "Je hebt de uitnodiging van <0>{0}</0> om lid te worden van hun organisatie geweigerd."
 
 #. placeholder {0}: `"${envelope.title}"`
 #: packages/lib/jobs/definitions/emails/send-signing-email.handler.ts
@@ -11747,10 +11337,6 @@ msgstr "Je hebt deze gebruiker succesvol uit het team verwijderd."
 msgid "You have successfully revoked access."
 msgstr "Je hebt de toegang succesvol ingetrokken."
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "You have the right to withdraw your consent to use electronic signatures at any time before completing the signing process. To withdraw your consent, please contact the sender of the document. In failing to contact the sender you may reach out to <0>{SUPPORT_EMAIL}</0> for assistance. Be aware that withdrawing consent may delay or halt the completion of the related transaction or service."
-msgstr "Je hebt het recht je toestemming voor het gebruik van elektronische handtekeningen op elk moment vóór voltooiing van het ondertekeningsproces in te trekken. Neem hiervoor contact op met de verzender van het document. Als dat niet lukt, kun je contact opnemen met <0>{SUPPORT_EMAIL}</0> voor hulp. Houd er rekening mee dat het intrekken van toestemming de voltooiing van de betreffende transactie of dienst kan vertragen of stopzetten."
-
 #: apps/remix/app/components/dialogs/team-member-update-dialog.tsx
 msgid "You have updated {memberName}."
 msgstr "Je hebt {memberName} bijgewerkt."
@@ -11762,11 +11348,6 @@ msgstr "Je hebt {organisationMemberName} bijgewerkt."
 #: apps/remix/app/components/dialogs/team-group-update-dialog.tsx
 msgid "You have updated the team group."
 msgstr "Je hebt de teamgroep bijgewerkt."
-
-#. placeholder {0}: data.teamName
-#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-msgid "You have verified your email address for <0>{0}</0>."
-msgstr "Je hebt je e‑mailadres voor <0>{0}</0> geverifieerd."
 
 #: packages/lib/utils/document-audit-logs.ts
 msgid "You moved the document to team"
@@ -11925,10 +11506,6 @@ msgstr "Je bent een beheerder. Je kunt AI-functies voor dit team direct inschake
 msgid "You've made too many detection requests. Please wait a minute before trying again."
 msgstr "U heeft te veel detectieverzoeken gedaan. Wacht een minuut voordat u het opnieuw probeert."
 
-#: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
-msgid "Your Account"
-msgstr "Uw account"
-
 #: apps/remix/app/components/dialogs/account-delete-dialog.tsx
 msgid "Your account has been deleted successfully."
 msgstr "Je account is succesvol verwijderd."
@@ -12043,14 +11620,6 @@ msgstr "Je documenten"
 #: apps/remix/app/components/general/document-signing/document-signing-complete-dialog.tsx
 msgid "Your Email"
 msgstr "Uw e-mailadres"
-
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has already been confirmed. You can now use all features of Documenso."
-msgstr "Je e-mailadres is al bevestigd. Je kunt nu alle functies van Documenso gebruiken."
-
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has been successfully confirmed! You can now use all features of Documenso."
-msgstr "Je e‑mail is succesvol bevestigd! Je kunt nu alle functies van Documenso gebruiken."
 
 #. placeholder {0}: teamEmail.team.name
 #. placeholder {1}: teamEmail.team.url
@@ -12186,10 +11755,6 @@ msgstr "Je sjabloon wordt gedupliceerd."
 #: apps/remix/app/components/general/template/template-edit-form.tsx
 msgid "Your templates has been saved successfully."
 msgstr "Je sjablonen zijn succesvol opgeslagen."
-
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your token has expired!"
-msgstr "Je token is verlopen!"
 
 #: apps/remix/app/components/forms/token.tsx
 msgid "Your token was created successfully! Make sure to copy it because you won't be able to see it again!"
