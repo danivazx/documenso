@@ -24,6 +24,7 @@ export default function RecipientLayout({ matches }: Route.ComponentProps) {
   const hideHeader = matches.some(
     (match) =>
       match?.id === 'routes/_recipient+/sign.$token+/_index' ||
+      match?.id === 'routes/_recipient+/sign.$token+/complete' ||
       match?.id === 'routes/_recipient+/d.$token+/_index',
   );
 

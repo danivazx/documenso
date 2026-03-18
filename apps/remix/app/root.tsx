@@ -8,7 +8,7 @@ import {
   isRouteErrorResponse,
   useLoaderData,
 } from 'react-router';
-import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from 'remix-themes';
+import { PreventFlashOnWrongTheme, ThemeProvider } from 'remix-themes';
 
 import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
 import { SessionProvider } from '@documenso/lib/client-only/providers/session';
@@ -97,10 +97,8 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
   const { publicEnv, session, lang, disableAnimations, ...data } =
     useLoaderData<typeof loader>() || {};
 
-  const [theme] = useTheme();
-
   return (
-    <html translate="no" lang={lang} data-theme={theme} className={theme ?? ''}>
+    <html translate="no" lang={lang} data-theme="light" className="dark-mode-disabled">
       <head>
         <meta charSet="utf-8" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
