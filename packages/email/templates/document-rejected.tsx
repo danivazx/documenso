@@ -9,7 +9,6 @@ import { TemplateFooter } from '../template-components/template-footer';
 type DocumentRejectedEmailProps = {
   recipientName: string;
   documentName: string;
-  documentUrl: string;
   rejectionReason: string;
   assetBaseUrl?: string;
 };
@@ -17,7 +16,6 @@ type DocumentRejectedEmailProps = {
 export function DocumentRejectedEmail({
   recipientName,
   documentName,
-  documentUrl,
   rejectionReason,
   assetBaseUrl = 'http://localhost:3002',
 }: DocumentRejectedEmailProps) {
@@ -52,7 +50,6 @@ export function DocumentRejectedEmail({
               <TemplateDocumentRejected
                 recipientName={recipientName}
                 documentName={documentName}
-                documentUrl={documentUrl}
                 rejectionReason={rejectionReason}
               />
             </Section>

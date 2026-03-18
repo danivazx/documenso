@@ -19,7 +19,6 @@ import { unsafeBuildEnvelopeIdQuery } from '../../utils/envelope';
 import { isRecipientEmailValidForSending } from '../../utils/recipients';
 import { renderCustomEmailTemplate } from '../../utils/render-custom-email-template';
 import { renderEmailWithI18N } from '../../utils/render-email-with-i18n';
-import { formatDocumentsPath } from '../../utils/teams';
 import { getEmailContext } from '../email/get-email-context';
 
 export interface SendDocumentOptions {
@@ -99,16 +98,6 @@ export const sendCompletedEmail = async ({ id, requestMetadata }: SendDocumentOp
 
   const assetBaseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3000';
 
-  let documentOwnerDownloadLink = `${NEXT_PUBLIC_WEBAPP_URL()}${formatDocumentsPath(
-    envelope.team?.url,
-  )}/${envelope.id}`;
-
-  if (envelope.team?.url) {
-    documentOwnerDownloadLink = `${NEXT_PUBLIC_WEBAPP_URL()}/t/${envelope.team.url}/documents/${
-      envelope.id
-    }`;
-  }
-
   const emailSettings = extractDerivedDocumentEmailSettings(envelope.documentMeta);
   const isDocumentCompletedEmailEnabled = emailSettings.documentCompleted;
   const isOwnerDocumentCompletedEmailEnabled = emailSettings.ownerDocumentCompleted;
@@ -126,7 +115,6 @@ export const sendCompletedEmail = async ({ id, requestMetadata }: SendDocumentOp
     const template = createElement(DocumentCompletedEmailTemplate, {
       documentName: envelope.title,
       assetBaseUrl,
-      downloadLink: documentOwnerDownloadLink,
     });
 
     const [html, text] = await Promise.all([
@@ -194,7 +182,7 @@ export const sendCompletedEmail = async ({ id, requestMetadata }: SendDocumentOp
       const template = createElement(DocumentCompletedEmailTemplate, {
         documentName: envelope.title,
         assetBaseUrl,
-        downloadLink: recipient.email === owner.email ? documentOwnerDownloadLink : downloadLink,
+        downloadLink: recipient.email === owner.email ? undefined : downloadLink,
         customBody:
           isDirectTemplate && envelope.documentMeta?.message
             ? renderCustomEmailTemplate(envelope.documentMeta.message, customEmailTemplate)

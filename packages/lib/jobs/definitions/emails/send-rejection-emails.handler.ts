@@ -16,7 +16,6 @@ import { getEmailContext } from '../../../server-only/email/get-email-context';
 import { extractDerivedDocumentEmailSettings } from '../../../types/document-email';
 import { unsafeBuildEnvelopeIdQuery } from '../../../utils/envelope';
 import { renderEmailWithI18N } from '../../../utils/render-email-with-i18n';
-import { formatDocumentsPath } from '../../../utils/teams';
 import type { JobRunIO } from '../../client/_internal/job';
 import type { TSendSigningRejectionEmailsJobDefinition } from './send-rejection-emails';
 
@@ -124,9 +123,6 @@ export const run = async ({
     const ownerTemplate = createElement(DocumentRejectedEmail, {
       recipientName: recipient.name,
       documentName: envelope.title,
-      documentUrl: `${NEXT_PUBLIC_WEBAPP_URL()}${formatDocumentsPath(envelope.team?.url)}/${
-        envelope.id
-      }`,
       rejectionReason: recipient.rejectionReason || '',
       assetBaseUrl: NEXT_PUBLIC_WEBAPP_URL(),
     });
