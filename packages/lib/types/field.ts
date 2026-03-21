@@ -6,9 +6,15 @@ import { FieldSchema } from '@documenso/prisma/generated/zod/modelSchema/FieldSc
 import {
   FIELD_SIGNATURE_META_DEFAULT_VALUES,
   ZCheckboxFieldMeta,
+  ZDateFieldMeta,
   ZDropdownFieldMeta,
+  ZEmailFieldMeta,
+  ZInitialsFieldMeta,
+  ZNameFieldMeta,
+  ZNumberFieldMeta,
   ZRadioFieldMeta,
   ZSignatureFieldMeta,
+  ZTextFieldMeta,
 } from './field-meta';
 
 /**
@@ -108,7 +114,7 @@ export const BaseFieldSchemaUsingNumbers = ZFieldSchema.extend({
 
 export const ZFieldTextSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.TEXT),
-  fieldMeta: z.null(),
+  fieldMeta: ZTextFieldMeta.nullish(),
 });
 
 export type TFieldText = z.infer<typeof ZFieldTextSchema>;
@@ -126,56 +132,56 @@ export type TFieldFreeSignature = z.infer<typeof ZFieldFreeSignatureSchema>;
 
 export const ZFieldInitialsSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.INITIALS),
-  fieldMeta: z.null(),
+  fieldMeta: ZInitialsFieldMeta.nullish(),
 });
 
 export type TFieldInitials = z.infer<typeof ZFieldInitialsSchema>;
 
 export const ZFieldNameSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.NAME),
-  fieldMeta: z.null(),
+  fieldMeta: ZNameFieldMeta.nullish(),
 });
 
 export type TFieldName = z.infer<typeof ZFieldNameSchema>;
 
 export const ZFieldEmailSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.EMAIL),
-  fieldMeta: z.null(),
+  fieldMeta: ZEmailFieldMeta.nullish(),
 });
 
 export type TFieldEmail = z.infer<typeof ZFieldEmailSchema>;
 
 export const ZFieldDateSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.DATE),
-  fieldMeta: z.null(),
+  fieldMeta: ZDateFieldMeta.nullish(),
 });
 
 export type TFieldDate = z.infer<typeof ZFieldDateSchema>;
 
 export const ZFieldNumberSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.NUMBER),
-  fieldMeta: z.null(),
+  fieldMeta: ZNumberFieldMeta.nullish(),
 });
 
 export type TFieldNumber = z.infer<typeof ZFieldNumberSchema>;
 
 export const ZFieldRadioSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.RADIO),
-  fieldMeta: ZRadioFieldMeta,
+  fieldMeta: ZRadioFieldMeta.nullish(),
 });
 
 export type TFieldRadio = z.infer<typeof ZFieldRadioSchema>;
 
 export const ZFieldCheckboxSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.CHECKBOX),
-  fieldMeta: ZCheckboxFieldMeta,
+  fieldMeta: ZCheckboxFieldMeta.nullish(),
 });
 
 export type TFieldCheckbox = z.infer<typeof ZFieldCheckboxSchema>;
 
 export const ZFieldDropdownSchema = BaseFieldSchemaUsingNumbers.extend({
   type: z.literal(FieldType.DROPDOWN),
-  fieldMeta: ZDropdownFieldMeta,
+  fieldMeta: ZDropdownFieldMeta.nullish(),
 });
 
 export type TFieldDropdown = z.infer<typeof ZFieldDropdownSchema>;
