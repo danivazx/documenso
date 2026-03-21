@@ -25,6 +25,13 @@ export const handleCheckboxFieldClick = async (
     });
   }
 
+  if (!field.fieldMeta) {
+    return {
+      type: FieldType.CHECKBOX,
+      value: [],
+    };
+  }
+
   const { values = [], validationRule, validationLength } = field.fieldMeta;
   const { customText } = field;
 
