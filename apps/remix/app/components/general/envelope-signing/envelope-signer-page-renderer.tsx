@@ -23,7 +23,6 @@ import type { TEnvelope } from '@documenso/lib/types/envelope';
 import { ZFullFieldSchema } from '@documenso/lib/types/field';
 import { createSpinner } from '@documenso/lib/universal/field-renderer/field-generic-items';
 import { renderField } from '@documenso/lib/universal/field-renderer/render-field';
-import { isFieldUnsignedAndRequired } from '@documenso/lib/utils/advanced-fields-helpers';
 import { getClientSideFieldTranslations } from '@documenso/lib/utils/fields';
 import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
 import type { TSignEnvelopeFieldValue } from '@documenso/trpc/server/envelope-router/sign-envelope-field.types';
@@ -146,7 +145,7 @@ export default function EnvelopeSignerPageRenderer() {
 
     if (fieldToRender.fieldMeta?.readOnly) {
       color = 'readOnly';
-    } else if (showPendingFieldTooltip && isFieldUnsignedAndRequired(fieldToRender)) {
+    } else if (showPendingFieldTooltip) {
       color = 'orange';
     }
 
